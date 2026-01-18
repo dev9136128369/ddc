@@ -5,6 +5,7 @@ import {
   Quote, ThumbsUp, Send, Calendar, Microscope, Wifi, GraduationCap ,Users, Mail,CircleCheckBig
 } from 'lucide-react';
 
+import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <main className="w-full bg-[#050B14]">
