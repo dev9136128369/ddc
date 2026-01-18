@@ -296,7 +296,7 @@ const Home = () => {
     details={
       <>
         <span className="text-[#4d4d4dff] font-bold">+91 8079797978,</span><br />
-        <span className="text-[#4d4d4dff] font-bold">011-XXXXXXXX</span><br />
+        {/* <span className="text-[#4d4d4dff] font-bold">011-XXXXXXXX</span><br /> */}
         <span className="text-blue-400 font-semibold">(Emergency Support)</span>
       </>
     }

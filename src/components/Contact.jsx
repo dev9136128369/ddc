@@ -79,7 +79,7 @@ const Contact = () => {
                   icon={<Phone />}
                   title="Phone Numbers"
                   line1="+91 8079797978"
-                  line2="011-XXXXXXXX"
+                  // line2="011-XXXXXXXX"
                   highlight="(Emergency Support)"
                 />
 
