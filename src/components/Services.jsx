@@ -8,7 +8,7 @@ const Services = () => {
   const allServices = [
     {
       title: "Orthodontics & Braces",
-      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800", // Braces Image
+      image: "/Images/Dental1.jfif", // Braces Image
       desc: "Specialized treatment using visible and invisible braces, and advanced clear aligner therapy to enhance facial aesthetics.",
       icon: <Shield />,
       tags: ["Invisalign", "Metal Braces", "Clear Aligners"],
@@ -16,7 +16,7 @@ const Services = () => {
     },
     {
       title: "Micro-Endodontics",
-      image: "https://images.unsplash.com/photo-1629909605124-42595800f8c1?q=80&w=800", // RCT/Microscope Image
+      image: "/Images/modernclinec.jfif", // RCT/Microscope Image
       desc: "Painless root canal treatments using advanced magnification and precision techniques for long-term clinical success.",
       icon: <Microscope />,
       tags: ["Painless RCT", "Magnification", "Biomimetic"],
@@ -24,7 +24,7 @@ const Services = () => {
     },
     {
       title: "Prosthodontics",
-      image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800", // Crowns/Bridges Image
+      image: "/Images/Dental2.jfif", // Crowns/Bridges Image
       desc: "Precise and ethical restorative solutions specializing in crowns, bridges, and full mouth rehabilitation.",
       icon: <Activity />,
       tags: ["Crowns", "Bridges", "Rehabilitation"],
@@ -32,7 +32,7 @@ const Services = () => {
     },
     {
       title: "Dental Implants",
-      image: "https://images.unsplash.com/photo-1593022356269-609ed284b3c3?q=80&w=800", // Implant Image
+      image: "/Images/JenrailDensity.avif", // Implant Image
       desc: "Durable and predictable tooth replacements aligned with current evidence-based standards.",
       icon: <Heart />,
       tags: ["Implants", "Surgery", "Oral Health"],
@@ -40,7 +40,7 @@ const Services = () => {
     },
     {
       title: "Pediatric Dentistry",
-      image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=800", // Kids Dentistry Image
+      image: "/Images/DentailSerzer.jfif", // Kids Dentistry Image
       desc: "Exclusive child dental care with advanced behavior management to ensure a stress-free experience for infants and toddlers.",
       icon: <Baby />,
       tags: ["Child Specialist", "Sedation", "Kids Care"],
@@ -48,7 +48,7 @@ const Services = () => {
     },
     {
       title: "Cosmetic Dentistry",
-      image: "https://images.unsplash.com/photo-1516069673215-caad1516e9d6?q=80&w=800", // Whitening/Veneers Image
+      image: "/Images/comasticDensti.avif", // Whitening/Veneers Image
       desc: "Transform your smile with aesthetic excellence, including premium veneers and professional teeth whitening.",
       icon: <Sparkles />,
       tags: ["Veneers", "Whitening", "Smile Makeover"],

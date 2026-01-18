@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
   Phone, Mail, MapPin, Send, MessageCircle, 
-  Clock, Globe, CircleCheckBig, Sparkles, ShieldCheck 
+  Clock, Globe, CircleCheckBig, Sparkles, ShieldCheck, QrCode 
 } from 'lucide-react';
 
 const Contact = () => {
@@ -46,9 +46,9 @@ const Contact = () => {
             <div className="lg:col-span-5 space-y-8">
               <h3 className="text-3xl font-bold text-white mb-8 italic">Visit Our Premium Clinic</h3>
               
-              <div className="grid grid-cols-1 gap-6">
+              <div className="grid grid-cols-1 gap-6 text-left">
                 <NewContactCard 
-                  icon={<MapPin className="text-[#D4AF37] hover:text-[#ffffff]" />}
+                  icon={<MapPin />}
                   title="Clinic Location"
                   line1="R-241, Ground Floor, G.K-1,"
                   line2="Opp. GK-1 Police Station, New Delhi - 110048"
@@ -56,8 +56,27 @@ const Contact = () => {
                   link="https://share.google/6A7CQMKjflxTbhmo4"
                 />
 
+                {/* --- QR CODE SECTION START --- */}
+                <div className="bg-[#0A1628]/40 backdrop-blur-sm border border-[#D4AF37]/20 p-6 rounded-3xl flex items-center gap-6 group hover:border-[#D4AF37]/50 transition-all duration-300">
+                  <div className="bg-white p-2 rounded-xl shrink-0 group-hover:scale-105 transition-transform duration-500">
+                    <img 
+                      src="/Images/delhidentalqr.jpeg" 
+                      alt="Clinic QR Code" 
+                      className="w-24 h-24 object-contain"
+                    />
+                  </div>
+                  <div className="text-left">
+                    <h4 className="text-[#D4AF37] font-bold text-xs uppercase tracking-widest mb-1 flex items-center gap-2">
+                      <QrCode size={14} /> Scan for Location
+                    </h4>
+                    <p className="text-white font-bold text-sm leading-tight">Digital Wayfinder</p>
+                    <p className="text-gray-400 text-xs mt-2">Scan with your phone camera to get instant directions on Google Maps.</p>
+                  </div>
+                </div>
+                {/* --- QR CODE SECTION END --- */}
+
                 <NewContactCard 
-                  icon={<Phone className="text-[#D4AF37] hover:text-[#ffffff]" />}
+                  icon={<Phone />}
                   title="Phone Numbers"
                   line1="+91 8079797978"
                   line2="011-XXXXXXXX"
@@ -65,14 +84,14 @@ const Contact = () => {
                 />
 
                 <NewContactCard 
-                  icon={<Globe className="text-[#D4AF37] hover:text-[#ffffff]" />}
+                  icon={<Globe />}
                   title="Online Presence"
                   line1="www.delhidental.org"
                   line2="info@delhidental.org"
                 />
 
                 <NewContactCard 
-                  icon={<Clock className="text-[#D4AF37] hover:text-[#ffffff]" />}
+                  icon={<Clock />}
                   title="Working Hours"
                   line1="Mon - Sat: 9:00 AM - 8:00 PM"
                   line2="Sunday: 10:00 AM - 2:00 PM"
@@ -97,7 +116,7 @@ const Contact = () => {
             </div>
 
             {/* Right Column: Appointment Form (60% width on Desktop) */}
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7 mt-16">
               <div className="bg-[#0A1628] rounded-[40px] p-8 md:p-12 border border-gray-800 shadow-3xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/5 blur-3xl rounded-full"></div>
                 
@@ -105,20 +124,20 @@ const Contact = () => {
                   <ShieldCheck className="text-[#D4AF37]" /> Secure Appointment Request
                 </h3>
 
-                <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+                <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10 text-left">
                   <div className="space-y-2">
                     <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Full Name *</label>
-                    <input type="text" placeholder="John Doe" className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-Black outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required />
+                    <input type="text" placeholder="John Doe" className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-black outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required />
                   </div>
 
                   <div className="space-y-2">
                     <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Email Address *</label>
-                    <input type="email" placeholder="john@example.com" className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-[#0A1628] outline-none focus:border-[#D4AF37] transition-all" required />
+                    <input type="email" placeholder="john@example.com" className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-black outline-none focus:border-[#D4AF37] transition-all" required />
                   </div>
 
                   <div className="space-y-2">
                     <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Phone Number *</label>
-                    <input type="tel" placeholder="+91 XXXXX XXXXX" className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-[#0A1628] outline-none focus:border-[#D4AF37] transition-all" required />
+                    <input type="tel" placeholder="+91 XXXXX XXXXX" className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-black outline-none focus:border-[#D4AF37] transition-all" required />
                   </div>
 
                   <div className="space-y-2">
@@ -134,7 +153,7 @@ const Contact = () => {
 
                   <div className="md:col-span-2 space-y-2">
                     <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Your Message</label>
-                    <textarea rows="4" placeholder="How can we help you?" className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-[#0A1628] outline-none focus:border-[#D4AF37] transition-all resize-none"></textarea>
+                    <textarea rows="4" placeholder="How can we help you?" className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-black outline-none focus:border-[#D4AF37] transition-all resize-none"></textarea>
                   </div>
 
                   <div className="md:col-span-2 mt-4">
@@ -156,13 +175,11 @@ const Contact = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-br from-[#0A1628] via-[#1A2B47] to-[#0A1628] rounded-[50px] p-10 md:p-16 border border-[#D4AF37]/20 shadow-4xl relative overflow-hidden group">
-            
-            {/* Animated Decorative Rings */}
             <div className="absolute -top-24 -right-24 w-96 h-96 border-[40px] border-[#D4AF37]/5 rounded-full animate-pulse"></div>
             <div className="absolute -bottom-24 -left-24 w-96 h-96 border-[40px] border-blue-500/5 rounded-full"></div>
 
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
-              <div className="text-center lg:text-left space-y-6 lg:max-w-2xl">
+              <div className="text-center lg:text-left space-y-6 lg:max-w-2xl text-left">
                 <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                   Experience <span className="text-[#D4AF37] italic font-serif">Painless</span> Dental Excellence
                 </h2>
@@ -193,16 +210,16 @@ const Contact = () => {
 
 const NewContactCard = ({ icon, title, line1, line2, linkText, link, highlight }) => (
   <div className="group bg-[#0A1628]/40 backdrop-blur-sm border border-gray-800 p-6 rounded-3xl hover:border-[#D4AF37]/40 transition-all duration-300 flex gap-5">
-    <div className="flex-shrink-0 w-14 h-14 bg-[#1A2B47]  rounded-2xl flex items-center justify-center group-hover:bg-[#D4AF37] group-hover:text-[#0A1628] transition-all duration-500 shadow-inner">
+    <div className="flex-shrink-0 w-14 h-14 bg-[#1A2B47] rounded-2xl flex items-center justify-center group-hover:bg-[#D4AF37] transition-all duration-500 shadow-inner">
       {React.cloneElement(icon, { size: 28, className: "text-[#D4AF37] group-hover:text-white transition-colors duration-500" })}
     </div>
-    <div className="space-y-1">
+    <div className="space-y-1 text-left">
       <h4 className="text-[#D4AF37] font-bold text-xs uppercase tracking-[0.2em] mb-2">{title}</h4>
       <p className="text-white font-bold text-base leading-tight">{line1}</p>
       <p className="text-gray-400 text-sm">{line2}</p>
       {highlight && <p className="text-blue-400 text-xs font-bold italic mt-2">{highlight}</p>}
       {linkText && (
-        <a href={link} target="_blank" className="inline-block text-[#D4AF37] text-xs font-bold underline underline-offset-4 mt-3 hover:text-white transition-colors">
+        <a href={link} target="_blank" rel="noopener noreferrer" className="inline-block text-[#D4AF37] text-xs font-bold underline underline-offset-4 mt-3 hover:text-white transition-colors">
           {linkText}
         </a>
       )}

@@ -129,9 +129,9 @@ const Home = () => {
             <ServiceCard img="/Images/Dental1.jfif" title="Orthodontics" icon={<Shield />} desc="Braces and clear aligners for perfectly aligned smiles by Dr. Nitu Gautam." />
             <ServiceCard img="/Images/modernclinec.jfif" title="Micro-Endodontics" icon={<Microscope />} desc="Painless Root Canal via advanced magnification by Dr. Sonali Bansal." />
             <ServiceCard img="/Images/DentailSerzer.jfif" title="Pediatric Care" icon={<Baby />} desc="Gentle behavior management for children by specialist Dr. Ferah Khanna." />
-            <ServiceCard img="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80" title="Prosthodontics" icon={<Heart />} desc="Implants and full mouth rehabilitation by specialist Dr. Vinod Khanna." />
-            <ServiceCard img="https://images.unsplash.com/photo-1516069673215-caad1516e9d6?q=80" title="Cosmetic Dentistry" icon={<Sparkles />} desc="Smile makeovers and biomimetic dentistry for a naturally perfect appearance." />
-            <ServiceCard img="https://images.unsplash.com/photo-1445527815219-ecbfec67492e?q=80" title="General Dentistry" icon={<Smile />} desc="Premium diagnostic checkups and digital dentistry for the whole family." />
+            <ServiceCard img="/Images/Dental2.jfif" title="Prosthodontics" icon={<Heart />} desc="Implants and full mouth rehabilitation by specialist Dr. Vinod Khanna." />
+            <ServiceCard img="/Images/comasticDensti.avif" title="Cosmetic Dentistry" icon={<Sparkles />} desc="Smile makeovers and biomimetic dentistry for a naturally perfect appearance." />
+            <ServiceCard img="/Images/JenrailDensity.avif" title="General Dentistry" icon={<Smile />} desc="Premium diagnostic checkups and digital dentistry for the whole family." />
           </div>
 
           <div className="mt-16 text-center max-w-5xl mx-auto px-4">
@@ -175,9 +175,9 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            <SuiteCard img="https://images.unsplash.com/photo-1704455306925-1401c3012117?q=80&w=1080" title="Premium Suites" desc="Luxury treatment rooms with ergonomic chairs and ambient lighting." tags={["Privacy", "Comfort"]} />
-            <SuiteCard img="https://images.unsplash.com/photo-1643660527078-743fc7c9f857?q=80&w=1080" title="Advanced Surgery" desc="Equipped with the latest technology for complex surgical procedures." tags={["Laser Tech", "Monitoring"]} />
-            <SuiteCard img="https://images.unsplash.com/photo-1642844819197-5f5f21b89ff8?q=80&w=1080" title="Diagnostics Lab" desc="In-house digital imaging for instant and accurate diagnosis." tags={["3D Imaging", "AI Analysis"]} />
+            <SuiteCard img="/Images/PrimemDensity.jfif" title="Premium Suites" desc="Luxury treatment rooms with ergonomic chairs and ambient lighting." tags={["Privacy", "Comfort"]} />
+            <SuiteCard img="/Images/Sizer.jfif" title="Advanced Surgery" desc="Equipped with the latest technology for complex surgical procedures." tags={["Laser Tech", "Monitoring"]} />
+            <SuiteCard img="/Images/Chare.jfif" title="Diagnostics Lab" desc="In-house digital imaging for instant and accurate diagnosis." tags={["3D Imaging", "AI Analysis"]} />
           </div>
 
           <div className="bg-gradient-to-r from-[#1A2B47]/50 to-[#1A2B47]/30 backdrop-blur-xl border border-[#D4AF37]/20 rounded-2xl p-8 mb-16">
