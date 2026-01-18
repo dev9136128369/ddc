@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone, MapPin, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,6 +38,7 @@ const Navbar = () => {
           
        
           {/* Logo Section */}
+          <Link to="/" className="flex items-center gap-4">
        <div className="flex items-center gap-4">
   {/* Logo Image Container */}
   <div className="relative w-26 h-26 md:w-30 md:h-25 flex items-center justify-center overflow-hidden">
@@ -57,6 +59,7 @@ const Navbar = () => {
     </p>
   </div>
 </div>
+</Link>
           {/* <div className="flex items-center gap-3">
             <div className="bg-[#d4af37] text-[#0a1122] font-bold p-2.5 rounded-md text-xl shadow-lg">
               DDC
@@ -74,21 +77,21 @@ const Navbar = () => {
           {/* Desktop Menu Links */}
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                className="text-white hover:text-[#d4af37]  text-[18px] transition-all duration-300"
+                to={link.href} // 3. href ko 'to' mein badla
+                className="text-white hover:text-[#d4af37] text-[18px] transition-all duration-300"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* Right Action Button */}
           <div className="hidden lg:block">
-            <button className="bg-[#d4af37] hover:bg-[#b8962e] text-[#0a1122] px-7 py-3 rounded-md font-bold text-sm transition-all transform hover:scale-105 shadow-lg shadow-yellow-900/10 flex items-center gap-2">
+            <Link to="/Contact" className="bg-[#d4af37] hover:bg-[#b8962e] text-[#0a1122] px-7 py-3 rounded-md font-bold text-sm transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
               <Calendar size={16} /> Book Now
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -110,20 +113,20 @@ const Navbar = () => {
              <div className="text-[#d4af37] font-bold text-2xl">DDC</div>
              <button onClick={() => setIsOpen(false)} className="text-[#d4af37]"><X size={35} /></button>
           </div>
-          <div className="flex flex-col gap-6 text-center">
+         <div className="flex flex-col gap-6 text-center">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href} // 4. Mobile mein bhi 'to' use kiya
                 className="text-xl font-semibold text-gray-200 hover:text-[#d4af37]"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
-            <button className="mt-6 bg-[#d4af37] text-[#0a1122] px-6 py-4 rounded-lg font-bold text-lg">
+            <Link to="/Contact" onClick={() => setIsOpen(false)} className="mt-6 bg-[#d4af37] text-[#0a1122] px-6 py-4 rounded-lg font-bold text-lg text-center">
                Book Appointment
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -18,12 +18,14 @@ import Services from './components/Services.jsx';
 import OurTeam from './components/OurTeam.jsx';
 import Testimonials from './components/Testimonials.jsx';
 
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
   return (
     // <UserProvider>
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Suspense fallback={<div className="page-loading">Loading...</div>}>
           <Routes>

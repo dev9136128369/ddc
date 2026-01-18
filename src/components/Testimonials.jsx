@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
-  Star, Quote, ThumbsUp, MessageSquare, 
-  Award, Heart, ShieldCheck, CheckCircle2 
+  Star, Quote, Heart, ShieldCheck, Award, MessageSquare 
 } from 'lucide-react';
 
 const Testimonials = () => {
@@ -9,18 +8,20 @@ const Testimonials = () => {
     {
       name: "Anjali Mehta",
       location: "South Delhi",
-      service: "Teeth Whitening & Veneers",
-      date: "December 2025",
-      text: "Exceptional service and results! The cosmetic dentistry work transformed my smile completely. The team is professional, caring, and the clinic environment is luxurious and comfortable.",
+      service: "Invisalign & Aesthetics",
+      date: "January 2026",
+      // Dr. Nitu's expertise in facial harmony
+      text: "Dr. Nitu Gautam is a true artist. Her focus on facial harmony and functional balance during my aligner treatment was impressive. With 16+ years of experience, her precision in Orthodontics is unmatched.",
       initial: "A",
       rating: 5
     },
     {
       name: "Rahul Kapoor",
-      location: "Connaught Place",
-      service: "Root Canal Treatment",
-      date: "November 2025",
-      text: "I was nervous about my root canal, but Dr. Sonali made the entire process painless and stress-free. The advanced micro-endodontics technology and gentle approach made all the difference!",
+      location: "Greater Kailash",
+      service: "Micro-Endodontics",
+      date: "December 2025",
+      // Dr. Sonali's expertise in painless RCT & Biomimetic dentistry
+      text: "I was worried about my root canal, but Dr. Sonali's use of micro-endodontics magnification made it painless. Her interest in biomimetic dentistry saved my natural tooth structure perfectly.",
       initial: "R",
       rating: 5
     },
@@ -28,35 +29,39 @@ const Testimonials = () => {
       name: "Sonia Gupta",
       location: "Vasant Vihar",
       service: "Pediatric Care",
-      date: "October 2025",
-      text: "Best pediatric care in Delhi! Dr. Ferah is wonderful with children. My daughter actually enjoys her dental visits now. Highly recommend for families seeking quality care.",
+      date: "November 2025",
+      // Dr. Ferah's expertise in behavior management
+      text: "Dr. Ferah is a magician with kids! Her advanced behavior management techniques helped my anxious child stay calm. DDC is definitely the best place for pediatric dental care in Delhi.",
       initial: "S",
       rating: 5
     },
     {
       name: "Vikram Singh",
-      location: "Greater Kailash",
-      service: "Dental Implants",
-      date: "January 2026",
-      text: "Dr. Vinod's expertise in implants is unmatched. The procedure was precise, ethical, and the recovery was very smooth. The transparent communication helped me make the right decision.",
+      location: "South Extension",
+      service: "Full Mouth Rehab",
+      date: "October 2025",
+      // Dr. Vinod's expertise in Prosthodontics
+      text: "Dr. Vinod Khanna's meticulous treatment planning for my full mouth rehabilitation was outstanding. He is ethical and transparent, explaining every option for my implants and crowns clearly.",
       initial: "V",
       rating: 5
     },
     {
-      name: "Pooja Sharma",
-      location: "New Delhi",
-      service: "Invisalign / Braces",
+      name: "Priya Sharma",
+      location: "Saket",
+      service: "Visible Braces",
       date: "September 2025",
-      text: "Dr. Nitu Gautam is a true artist. My aligner treatment has been life-changing. Her focus on facial harmony and functional balance is what sets this clinic apart from others.",
+      // Dr. Nitu's academic & clinical background
+      text: "Coming from Nair Hospital Dental College background, Dr. Nitu's clinical integration of advanced orthodontic science is evident. My braces treatment has been smooth and very professional.",
       initial: "P",
       rating: 5
     },
     {
       name: "Amit Verma",
       location: "Noida",
-      service: "Full Mouth Rehabilitation",
+      service: "Cosmetic Restoration",
       date: "August 2025",
-      text: "A truly world-class experience. From sterilization protocols to advanced surgical suites, everything is top-notch. DDC is definitely the premier dental excellence center in Delhi.",
+      // Dr. Vinod/Dr. Sonali integration
+      text: "The aesthetic excellence at Delhi Dental Clinic is world-class. From painless procedures to durable restorative solutions, the team ensures functional excellence and a perfect smile.",
       initial: "A",
       rating: 5
     }
@@ -74,7 +79,7 @@ const Testimonials = () => {
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 italic">What Our Patients Say</h1>
           <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
-            Real experiences from over 50,000+ happy patients who have trusted us with their smiles and oral health.
+            Experience based on 16+ years of clinical mastery and specialized expertise from Delhi's leading dental professionals.
           </p>
         </div>
       </section>
@@ -84,7 +89,7 @@ const Testimonials = () => {
         <div className="bg-gradient-to-r from-[#0A1628] to-[#1A2B47] rounded-[40px] p-10 border border-gray-800 flex flex-wrap justify-center gap-12 md:gap-24">
           <StatItem label="Verified Reviews" val="2,500+" />
           <StatItem label="Average Rating" val="4.9 / 5.0" />
-          <StatItem label="Patient Satisfaction" val="98%" />
+          <StatItem label="Specialist Team" val="Expert Doctors" />
         </div>
       </section>
 
@@ -96,24 +101,20 @@ const Testimonials = () => {
               key={index} 
               className="group relative bg-[#0A1628]/40 backdrop-blur-xl border border-gray-800 p-8 rounded-[35px] hover:border-[#D4AF37]/40 transition-all duration-500 flex flex-col h-full"
             >
-              {/* Quote Icon */}
               <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-[#D4AF37] to-[#B8941F] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                 <Quote size={24} className="text-[#0A1628]" />
               </div>
 
-              {/* Stars */}
               <div className="flex gap-1 mb-6 text-left">
                 {[...Array(rev.rating)].map((_, i) => (
                   <Star key={i} size={16} className="fill-[#D4AF37] text-[#D4AF37]" />
                 ))}
               </div>
 
-              {/* Review Text */}
               <p className="text-gray-300 leading-relaxed mb-8 flex-grow text-left italic">
                 "{rev.text}"
               </p>
 
-              {/* Service Info */}
               <div className="mb-6 pt-6 border-t border-gray-800/50 flex items-center justify-between text-left">
                 <div>
                   <p className="text-[#D4AF37] text-xs font-bold uppercase tracking-wider">{rev.service}</p>
@@ -121,11 +122,10 @@ const Testimonials = () => {
                 </div>
                 <div className="flex items-center gap-1 bg-green-500/10 px-2 py-1 rounded-full">
                   <ShieldCheck size={12} className="text-green-500" />
-                  <span className="text-[10px] text-green-500 font-bold uppercase">Verified</span>
+                  <span className="text-[10px] text-green-500 font-bold uppercase">Verified Review</span>
                 </div>
               </div>
 
-              {/* Patient Info */}
               <div className="flex items-center gap-4 text-left">
                 <div className="w-12 h-12 bg-gradient-to-br from-[#1A2B47] to-[#0A1628] rounded-full flex items-center justify-center font-bold text-[#D4AF37] border border-[#D4AF37]/20">
                   {rev.initial}
@@ -144,12 +144,12 @@ const Testimonials = () => {
       <section className="mt-24 max-w-5xl mx-auto px-4">
         <div className="bg-gradient-to-r from-[#D4AF37] to-[#B8941F] rounded-[40px] p-12 text-center relative overflow-hidden group">
           <div className="relative z-10 text-[#0A1628]">
-             <h2 className="text-3xl md:text-4xl font-bold mb-4">Be Our Next Success Story</h2>
+             <h2 className="text-3xl md:text-4xl font-bold mb-4 italic">Crafting Smiles Daily</h2>
              <p className="font-bold opacity-80 mb-8 max-w-xl mx-auto uppercase tracking-widest text-sm">
-               Join 50K+ happy patients and start your journey to a perfect smile today.
+               Join 50K+ happy patients and experience precise, ethical, and painless dental excellence.
              </p>
              <a href="/contact" className="inline-block bg-[#0A1628] text-white px-10 py-5 rounded-2xl font-extrabold text-lg shadow-2xl hover:scale-105 transition-all">
-               Book Your Visit Now
+               Schedule Your Visit
              </a>
           </div>
         </div>
@@ -157,8 +157,6 @@ const Testimonials = () => {
     </main>
   );
 };
-
-// --- Sub Components ---
 
 const StatItem = ({ label, val }) => (
   <div className="text-center">

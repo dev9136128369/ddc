@@ -3,6 +3,7 @@ import {
   Award, Facebook, Instagram, Twitter, 
   Linkedin, MapPin, Phone, Mail, Heart 
 } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Agar aap React Router use kar rahe hain
 
 const Footer = () => {
   return (
@@ -18,28 +19,23 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center">
               <div className="relative">
-                <div className="absolute inset-0 bg-[#D4AF37] blur-md opacity-50"></div>
-                
-                <div className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center overflow-hidden">
-  <img 
-    src="/Images/DelhiDential.png"  
-    alt="Delhi Dental Logo" 
-    className="w-full h-full object-contain"
-  />
-</div>
-                {/* <div className="relative bg-gradient-to-br from-[#D4AF37] to-[#B8941F] px-3 py-2 rounded-lg">
-                  <span className="text-[#0A1628] font-bold tracking-wider">DDC</span>
-                </div> */}
+                <div className="relative w-26 h-16 md:w-26 md:h-20 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/Images/Transparent.png"  
+                    alt="Delhi Dental Logo" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
-              <div className="ml-3">
+              <div className="ml-3 text-left">
                 <div className="text-xl font-bold bg-gradient-to-r from-[#D4AF37] to-[#F4D03F] bg-clip-text text-transparent">
                   Delhi Dental Clinic
                 </div>
               </div>
             </div>
             
-            <p className="text-[#C0C0C0] leading-relaxed text-sm">
-              Providing excellence in dental care for over 20 years. Your smile is our priority, your satisfaction is our success.
+            <p className="text-[#C0C0C0] leading-relaxed text-sm text-left">
+              Providing excellence in dental care for over 16 years. Your smile is our priority, your satisfaction is our success.
             </p>
 
             <div className="flex items-center gap-2 text-[#D4AF37]">
@@ -49,8 +45,13 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex gap-3">
-              {[Facebook, Instagram, Twitter, Linkedin].map((Icon, index) => (
-                <a key={index} href="#" className="w-10 h-10 bg-[#1A2B47] border border-[#D4AF37]/30 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8941F] transition-all duration-300 group">
+              {[
+                { Icon: Facebook, link: "https://facebook.com" },
+                { Icon: Instagram, link: "https://instagram.com" },
+                { Icon: Twitter, link: "https://twitter.com" },
+                { Icon: Linkedin, link: "https://linkedin.com" }
+              ].map(({ Icon, link }, index) => (
+                <a key={index} href={link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#1A2B47] border border-[#D4AF37]/30 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8941F] transition-all duration-300 group">
                   <Icon size={18} className="text-[#D4AF37] group-hover:text-[#0A1628]" />
                 </a>
               ))}
@@ -58,43 +59,57 @@ const Footer = () => {
           </div>
 
           {/* 2. Quick Links */}
-          <div>
+          <div className="text-left">
             <h3 className="text-white mb-6 flex items-center gap-2 font-bold">
               <div className="w-1 h-6 bg-gradient-to-b from-[#D4AF37] to-[#B8941F] rounded-full"></div>
               Quick Links
             </h3>
             <ul className="space-y-3 text-[#C0C0C0]">
-              {['Home', 'Our Services', 'Infrastructure', 'Our Team', 'Testimonials', 'Contact Us'].map((link) => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase().replace(' ', '')}`} className="hover:text-[#D4AF37] transition-colors duration-300 inline-flex items-center gap-2 group text-sm">
+              {[
+                { name: 'Home', path: '/' },
+                { name: 'About Us', path: '/About' },
+                { name: 'Our Services', path: '/Services' },
+                { name: 'Our Team', path: '/OurTeam' },
+                { name: 'Testimonials', path: '/Testimonials' },
+                { name: 'Contact Us', path: '/Contact' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link to={link.path} className="hover:text-[#D4AF37] transition-colors duration-300 inline-flex items-center gap-2 group text-sm">
                     <span className="w-0 group-hover:w-2 h-0.5 bg-[#D4AF37] transition-all duration-300"></span>
-                    {link}
-                  </a>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* 3. Services */}
-          <div>
+          <div className="text-left">
             <h3 className="text-white mb-6 flex items-center gap-2 font-bold">
               <div className="w-1 h-6 bg-gradient-to-b from-[#D4AF37] to-[#B8941F] rounded-full"></div>
               Our Services
             </h3>
             <ul className="space-y-3 text-[#C0C0C0]">
-              {['General Dentistry', 'Cosmetic Dentistry', 'Orthodontics', 'Root Canal', 'Dental Implants', 'Pediatric Care'].map((service) => (
-                <li key={service}>
-                  <a href="#" className="hover:text-[#D4AF37] transition-colors duration-300 inline-flex items-center gap-2 group text-sm">
+              {[
+                { name: 'General Dentistry', path: '/Services' },
+                { name: 'Cosmetic Dentistry', path: '/Services' },
+                { name: 'Orthodontics', path: '/Services' },
+                { name: 'Root Canal', path: '/Services' },
+                { name: 'Dental Implants', path: '/Services' },
+                { name: 'Pediatric Care', path: '/Services' }
+              ].map((service) => (
+                <li key={service.name}>
+                  <Link to={service.path} className="hover:text-[#D4AF37] transition-colors duration-300 inline-flex items-center gap-2 group text-sm">
                     <span className="w-0 group-hover:w-2 h-0.5 bg-[#D4AF37] transition-all duration-300"></span>
-                    {service}
-                  </a>
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* 4. Contact Info */}
-          <div>
+          <div className="text-left">
             <h3 className="text-white mb-6 flex items-center gap-2 font-bold">
               <div className="w-1 h-6 bg-gradient-to-b from-[#D4AF37] to-[#B8941F] rounded-full"></div>
               Contact Info
@@ -104,14 +119,17 @@ const Footer = () => {
                 <div className="flex-shrink-0 w-10 h-10 bg-[#1A2B47] border border-[#D4AF37]/30 rounded-lg flex items-center justify-center group-hover:border-[#D4AF37] transition-all duration-300">
                   <MapPin size={18} className="text-[#D4AF37]" />
                 </div>
-                <div className="text-sm leading-relaxed">Ground floor R-241 Greater kailash-I Opp. GK-1 police station. New delhi-110048 </div>
+                <div className="text-sm leading-relaxed">
+                  R-241, Ground Floor, G.K-1, <br />
+                  Opp. GK-1 Police Station, New Delhi - 110048
+                </div>
               </div>
               
               <div className="flex items-center gap-3 group">
                 <div className="flex-shrink-0 w-10 h-10 bg-[#1A2B47] border border-[#D4AF37]/30 rounded-lg flex items-center justify-center group-hover:border-[#D4AF37] transition-all duration-300">
                   <Phone size={18} className="text-[#D4AF37]" />
                 </div>
-                <div className="text-sm">+91 8079797978 <br /> +91 011-xxxxxxx </div>
+                <div className="text-sm">+91 8079797978 <br /> 011-2345-6789</div>
               </div>
 
               <div className="flex items-center gap-3 group">
@@ -129,11 +147,11 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#C0C0C0]">
             <div className="flex items-center gap-2">
               <Heart size={16} className="text-[#D4AF37] fill-[#D4AF37]" />
-              © 2024 Delhi Dental Clinic. All rights reserved.
+              © 2026 Delhi Dental Clinic. All rights reserved.
             </div>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-[#D4AF37] transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-[#D4AF37] transition-colors">Terms of Service</a>
+              <Link to="/privacy" className="hover:text-[#D4AF37] transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-[#D4AF37] transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>
@@ -143,8 +161,6 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
 
 
 

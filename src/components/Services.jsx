@@ -8,7 +8,7 @@ const Services = () => {
   const allServices = [
     {
       title: "Orthodontics & Braces",
-      doctor: "Dr. Nitu Gautam",
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800", // Braces Image
       desc: "Specialized treatment using visible and invisible braces, and advanced clear aligner therapy to enhance facial aesthetics.",
       icon: <Shield />,
       tags: ["Invisalign", "Metal Braces", "Clear Aligners"],
@@ -16,7 +16,7 @@ const Services = () => {
     },
     {
       title: "Micro-Endodontics",
-      doctor: "Dr. Sonali Bansal",
+      image: "https://images.unsplash.com/photo-1629909605124-42595800f8c1?q=80&w=800", // RCT/Microscope Image
       desc: "Painless root canal treatments using advanced magnification and precision techniques for long-term clinical success.",
       icon: <Microscope />,
       tags: ["Painless RCT", "Magnification", "Biomimetic"],
@@ -24,7 +24,7 @@ const Services = () => {
     },
     {
       title: "Prosthodontics",
-      doctor: "Dr. Vinod Khanna",
+      image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800", // Crowns/Bridges Image
       desc: "Precise and ethical restorative solutions specializing in crowns, bridges, and full mouth rehabilitation.",
       icon: <Activity />,
       tags: ["Crowns", "Bridges", "Rehabilitation"],
@@ -32,7 +32,7 @@ const Services = () => {
     },
     {
       title: "Dental Implants",
-      doctor: "Dr. Vinod Khanna",
+      image: "https://images.unsplash.com/photo-1593022356269-609ed284b3c3?q=80&w=800", // Implant Image
       desc: "Durable and predictable tooth replacements aligned with current evidence-based standards.",
       icon: <Heart />,
       tags: ["Implants", "Surgery", "Oral Health"],
@@ -40,7 +40,7 @@ const Services = () => {
     },
     {
       title: "Pediatric Dentistry",
-      doctor: "Dr. Ferah Khanna",
+      image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=800", // Kids Dentistry Image
       desc: "Exclusive child dental care with advanced behavior management to ensure a stress-free experience for infants and toddlers.",
       icon: <Baby />,
       tags: ["Child Specialist", "Sedation", "Kids Care"],
@@ -48,7 +48,7 @@ const Services = () => {
     },
     {
       title: "Cosmetic Dentistry",
-      doctor: "Dr. Nitu Gautam",
+      image: "https://images.unsplash.com/photo-1516069673215-caad1516e9d6?q=80&w=800", // Whitening/Veneers Image
       desc: "Transform your smile with aesthetic excellence, including premium veneers and professional teeth whitening.",
       icon: <Sparkles />,
       tags: ["Veneers", "Whitening", "Smile Makeover"],
@@ -114,35 +114,44 @@ const Services = () => {
 
 // --- Sub Components ---
 
-const ServiceDetailCard = ({ title, doctor, desc, icon, tags, features }) => (
-  <div className="group bg-[#0A1628]/40 backdrop-blur-md border border-gray-800 rounded-[35px] p-8 hover:border-[#D4AF37]/40 transition-all duration-500 flex flex-col h-full">
-    <div className="flex justify-between items-start mb-8">
-      <div className="w-16 h-16 bg-[#1A2B47] rounded-2xl flex items-center justify-center text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#0A1628] transition-all duration-500 shadow-xl">
-        {React.cloneElement(icon, { size: 32 })}
-      </div>
-      <div className="flex flex-col items-end text-right">
-        <span className="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Specialist</span>
-        <span className="text-[#D4AF37] text-xs font-bold">{doctor}</span>
+const ServiceDetailCard = ({ title, image, desc, icon, tags, features }) => (
+  <div className="group bg-[#0A1628]/40 backdrop-blur-md border border-gray-800 rounded-[35px] overflow-hidden hover:border-[#D4AF37]/40 transition-all duration-500 flex flex-col h-full">
+    
+    {/* Image Section */}
+    <div className="relative h-52 overflow-hidden">
+      <img 
+        src={image} 
+        alt={title} 
+        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent"></div>
+      
+      {/* Floating Icon */}
+      <div className="absolute bottom-4 left-6 w-12 h-12 bg-[#1A2B47] rounded-xl flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/30 shadow-xl group-hover:bg-[#D4AF37] group-hover:text-[#0A1628] transition-all duration-500">
+        {React.cloneElement(icon, { size: 24 })}
       </div>
     </div>
 
-    <h3 className="text-2xl font-bold text-white mb-4 italic">{title}</h3>
-    <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">{desc}</p>
+    {/* Content Section */}
+    <div className="p-8 flex flex-col flex-grow">
+      <h3 className="text-2xl font-bold text-white mb-4 italic">{title}</h3>
+      <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">{desc}</p>
 
-    <div className="space-y-3 mb-8">
-      {features.map((feat, i) => (
-        <div key={i} className="flex items-center gap-2 text-xs text-gray-300 font-medium">
-          <CheckCircle2 size={14} className="text-[#D4AF37]" /> {feat}
-        </div>
-      ))}
-    </div>
+      <div className="space-y-3 mb-8">
+        {features.map((feat, i) => (
+          <div key={i} className="flex items-center gap-2 text-xs text-gray-300 font-medium">
+            <CheckCircle2 size={14} className="text-[#D4AF37]" /> {feat}
+          </div>
+        ))}
+      </div>
 
-    <div className="flex flex-wrap gap-2 pt-6 border-t border-gray-800">
-      {tags.map((tag, i) => (
-        <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-[10px] text-gray-400 font-bold border border-white/5 uppercase">
-          {tag}
-        </span>
-      ))}
+      <div className="flex flex-wrap gap-2 pt-6 border-t border-gray-800">
+        {tags.map((tag, i) => (
+          <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-[10px] text-gray-400 font-bold border border-white/5 uppercase">
+            {tag}
+          </span>
+        ))}
+      </div>
     </div>
   </div>
 );
