@@ -146,9 +146,17 @@ const Footer = () => {
         <div className="border-t border-[#D4AF37]/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#C0C0C0]">
             <div className="flex items-center gap-2">
-              <Heart size={16} className="text-[#D4AF37] fill-[#D4AF37]" />
-              © 2026 Delhi Dental Clinic. All rights reserved.
-            </div>
+    <Heart size={16} className="text-[#D4AF37] fill-[#D4AF37]" />
+    © 2026 Delhi Dental Clinic. Designed by {" "}
+    <a 
+      href="https://www.ciphershieldtech.com/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-[#D4AF37] hover:underline"
+    >
+      CipherShield Technologies
+    </a>
+  </div>
             <div className="flex gap-6">
               <Link to="/privacy" className="hover:text-[#D4AF37] transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="hover:text-[#D4AF37] transition-colors">Terms of Service</Link>
