@@ -41,14 +41,14 @@ const Home = () => {
 
               <div className="flex flex-wrap gap-4 mb-12">
                 <Link 
-                  href="/Contact" 
+                  to="/Contact" 
                   className="relative group overflow-hidden bg-gradient-to-r from-[#D4AF37] to-[#B8941F] text-[#0A1628] px-8 py-4 rounded-lg font-bold transition-all hover:scale-105 shadow-lg hover:shadow-[#D4AF37]/40 flex items-center justify-center gap-2"
                 >
                   <Sparkles size={20} /> Book Appointment
                 </Link>
 
                 <Link 
-                  href="/Services" 
+                  to="/Services" 
                   className="border-2 border-[#D4AF37] text-[#D4AF37] px-8 py-4 rounded-lg font-bold hover:bg-[#D4AF37]/10 transition-all flex items-center justify-center"
                 >
                   View Services
@@ -56,7 +56,7 @@ const Home = () => {
               </div>
 
               <div className="grid grid-cols-3 gap-6">
-                {[["50K+", "Happy Patients"], ["15+", "Expert Doctors"], ["98%", "Success Rate"]].map(([num, label]) => (
+                {[["10K+", "Happy Patients"], ["15+", "Expert Doctors"], ["98%", "Success Rate"]].map(([num, label]) => (
                   <div key={label} className="border-l-2 border-[#D4AF37] pl-4 text-left">
                     <div className="text-3xl text-[#D4AF37] font-bold mb-1">{num}</div>
                     <div className="text-sm text-[#C0C0C0] uppercase tracking-wider text-[10px]">{label}</div>
@@ -104,9 +104,16 @@ const Home = () => {
                   <div className="text-sm text-gray-700">Former Faculty at Nair Hospital & Professor at IDS Bhubaneswar.</div>
                 </div>
               </div>
-              <button className="flex items-center gap-2 text-[#D4AF37] font-bold hover:gap-4 transition-all">
+              {/* <button className="flex items-center gap-2 text-[#D4AF37] font-bold hover:gap-4 transition-all">
                 Read Full Biography <ArrowRight size={18} />
-              </button>
+              </button> */}
+               <Link 
+                  to="/About" 
+                  className="flex items-center gap-2 text-[#0A1628] font-bold hover:gap-4 transition-all"
+                >
+                     Read Full Biography <ArrowRight size={18} />
+                </Link>
+                 <div className="w-24 h-1 bg-[#d4af37] ml-8 "></div>
             </div>
           </div>
         </div>
@@ -117,7 +124,8 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 text-center">
             <div className="inline-block mb-4">
-              <span className="bg-gradient-to-r from-[#D4AF37] to-[#B8941F] bg-clip-text text-transparent text-sm tracking-widest uppercase font-bold text-center">Our Services</span>
+              <span className="bg-gradient-to-r from-[#0A1628] to-[#0A1628] bg-clip-text text-transparent text-sm tracking-widest uppercase font-bold text-center">Our Services</span>
+            <div className="w-24 h-1 bg-[#d4af37] mt-2 mx-auto"></div>
             </div>
             <h2 className="mb-6 text-4xl font-bold text-[#0A1628] text-center">Comprehensive Dental Solutions</h2>
             <p className="text-lg text-[#2e2e2eff] max-w-3xl mx-auto leading-relaxed text-center">
@@ -205,7 +213,9 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 text-center">
             <div className="inline-block mb-4">
-              <span className="bg-gradient-to-r from-[#D4AF37] to-[#B8941F] bg-clip-text text-transparent text-sm tracking-widest uppercase font-bold text-center">Our Team</span>
+              <span className="bg-gradient-to-r from-[#0A1628] to-[#0A1628] bg-clip-text text-transparent text-sm tracking-widest uppercase font-bold text-center">Our Team</span>
+            <div className="w-24 h-1 bg-[#d4af37] mt-2 mx-auto"></div>
+            
             </div>
             <h2 className="text-4xl font-bold text-[#0A1628] text-center">Meet Our Expert Specialists</h2>
            <p className="text-xl text-[#2e2e2eff] max-w-3xl mx-auto leading-relaxed">
@@ -245,9 +255,11 @@ const Home = () => {
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
            <div className="text-center mb-16">
              <div className="inline-block mb-4">
-               <span className="bg-gradient-to-r from-[#D4AF37] to-[#B8941F] bg-clip-text text-transparent text-sm tracking-widest uppercase font-bold">
+               <span className="bg-gradient-to-r from-[#0A1628] to-[#0A1628] bg-clip-text text-transparent text-sm tracking-widest uppercase font-bold">
                  Get In Touch
                </span>
+            <div className="w-24 h-1 bg-[#d4af37] mt-2 mx-auto"></div>
+
              </div>
              <h2 className="text-4xl font-bold text-[#0A1628] mb-6">Book Your Appointment</h2>
              <p className="text-xl text-[#2e2e2eff] max-w-3xl mx-auto leading-relaxed">

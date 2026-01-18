@@ -4,6 +4,8 @@ import {
   ArrowRight, Activity, Microscope, Zap, Award, CheckCircle2
 } from 'lucide-react';
 
+import { Link } from 'react-router-dom';
+
 const Services = () => {
   const allServices = [
     {
@@ -101,9 +103,9 @@ const Services = () => {
               </div>
             </div>
             <div className="shrink-0">
-               <a href="/contact" className="px-10 py-5 bg-[#D4AF37] text-[#0A1628] rounded-2xl font-extrabold text-lg shadow-xl shadow-[#D4AF37]/10 hover:scale-105 transition-all inline-block">
+               <Link to="/contact" className="px-10 py-5 bg-[#D4AF37] text-[#0A1628] rounded-2xl font-extrabold text-lg shadow-xl shadow-[#D4AF37]/10 hover:scale-105 transition-all inline-block">
                  Book Consultation
-               </a>
+               </Link>
             </div>
           </div>
         </div>

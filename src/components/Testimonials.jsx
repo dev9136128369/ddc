@@ -3,6 +3,8 @@ import {
   Star, Quote, Heart, ShieldCheck, Award, MessageSquare 
 } from 'lucide-react';
 
+import { Link } from 'react-router-dom';
+
 const Testimonials = () => {
   const reviews = [
     {
@@ -148,9 +150,9 @@ const Testimonials = () => {
              <p className="font-bold opacity-80 mb-8 max-w-xl mx-auto uppercase tracking-widest text-sm">
                Join 50K+ happy patients and experience precise, ethical, and painless dental excellence.
              </p>
-             <a href="/contact" className="inline-block bg-[#0A1628] text-white px-10 py-5 rounded-2xl font-extrabold text-lg shadow-2xl hover:scale-105 transition-all">
+             <Link to="/contact" className="inline-block bg-[#0A1628] text-white px-10 py-5 rounded-2xl font-extrabold text-lg shadow-2xl hover:scale-105 transition-all">
                Schedule Your Visit
-             </a>
+             </Link>
           </div>
         </div>
       </section>

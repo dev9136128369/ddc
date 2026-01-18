@@ -4,6 +4,8 @@ import {
   Linkedin, Mail, Heart, ShieldCheck, Microscope, Baby 
 } from 'lucide-react';
 
+import { Link } from 'react-router-dom';
+
 const OurTeam = () => {
   const doctors = [
     {
@@ -119,9 +121,12 @@ const OurTeam = () => {
                   </div>
                 </div>
 
-                <button className="w-full bg-gradient-to-r from-[#D4AF37] to-[#B8941F] text-[#0A1628] py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-[#D4AF37]/20 transition-all active:scale-95">
+                {/* <button className="w-full bg-gradient-to-r from-[#D4AF37] to-[#B8941F] text-[#0A1628] py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-[#D4AF37]/20 transition-all active:scale-95">
                   <Calendar size={16} /> Book Appointment
-                </button>
+                </button> */}
+                  <Link to="/contact" className="w-full bg-gradient-to-r from-[#D4AF37] to-[#B8941F] text-[#0A1628] py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-[#D4AF37]/20 transition-all active:scale-95">
+                 <Calendar size={16} /> Book Appointment
+               </Link>
               </div>
             </div>
           ))}
