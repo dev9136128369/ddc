@@ -4,6 +4,9 @@ import {
   Phone, Globe, CheckCircle2, ChevronRight, GraduationCap, Microscope, Baby 
 } from 'lucide-react';
 
+import SEO from '../components/SEO';
+import seoData from '../seoData';
+
 const About = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -27,6 +30,15 @@ const About = () => {
   }, [isPaused, galleryImages.length]);
 
   return (
+
+<>
+<SEO 
+        title={seoData.home.title} 
+        description={seoData.home.description} 
+        keywords={seoData.home.keywords} 
+      />
+
+
     <main className="w-full bg-[#050B14] pt-24 pb-20 text-white overflow-hidden">
       
       {/* 1. HERO SECTION */}
@@ -86,7 +98,7 @@ const About = () => {
                 <ContactInfo icon={<MapPin />} title="Location" val="G.K-I, New Delhi" />
                 <ContactInfo icon={<Phone />} title="Contact" val="+91 8079797978" />
                 <ContactInfo icon={<Globe />} title="Website" val="www.delhidental.org" />
-                <ContactInfo icon={<Heart />} title="Mission" val="Crafting Smiles" />
+                <ContactInfo icon={<Heart />} title="Mission" val="Creating Smiles, Changing Lives" />
               </div>
             </div>
           </div>
@@ -105,7 +117,7 @@ const About = () => {
                 </div>
                 <div className="mt-8 text-left">
                   <h3 className="text-2xl font-bold text-[#D4AF37]">Dr. Nitu Gautam</h3>
-                  <p className="text-gray-400 font-medium">MDS (Orthodontics & Dentofacial Orthopaedics)</p>
+                  <p className="text-gray-400 font-medium">BDS(nair ,Mumbai), MDS(orthodontics ,IDS)</p>
                   <p className="text-white font-bold mt-2 italic text-sm">Fellowship of the World Federation of Orthodontists (WFO)</p>
                 </div>
               </div>
@@ -114,10 +126,10 @@ const About = () => {
             <div className="lg:w-2/3 space-y-10 text-left">
               <div>
                 <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                  <Award className="text-[#D4AF37]" /> The Visionary Behind DDC
+                  <Award className="text-[#D4AF37]" /> The Visionary Leader and Pioneer in the field of Orthodontics.
                 </h2>
                 <p className="text-gray-300 leading-relaxed text-lg">
-                  Dr. Nitu Gautam is a highly accomplished dental professional, academician, and clinician with over 16 years of clinical experience. A graduate of the prestigious **Nair Hospital Dental College, Mumbai**, she has served as Professor and research guide, contributing extensively to evidence-based orthodontic practice.
+                  Dr. Nitu Gautam is a highly accomplished dental professional, academician, and clinician with over 16 years of clinical experience. A graduate of the prestigious Nair Hospital Dental College, Mumbai. she has served as Professor and research guide, contributing extensively to evidence-based orthodontic practice.
                 </p>
               </div>
 
@@ -174,7 +186,7 @@ const About = () => {
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3 text-sm text-gray-400">
-                    <GraduationCap className="text-[#D4AF37]" size={18} /> MDS (PGIMER, Chandigarh)
+                    <GraduationCap className="text-[#D4AF37]" size={18} /> BDS,MDS (pedodontics, PGIMER,Chandigarh)
                   </div>
                   <div className="flex items-center gap-3 text-sm text-gray-400">
                     <Baby className="text-[#D4AF37]" size={18} /> Child-Friendly Behavior Expert
@@ -200,7 +212,7 @@ const About = () => {
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3 text-sm text-gray-400">
-                    <GraduationCap className="text-[#D4AF37]" size={18} /> MDS (Post Graduate Institute of Medical Sciences)
+                    <GraduationCap className="text-[#D4AF37]" size={18} /> BDS(Government Dental College ), MDS(Prosthodontics, PGIMER,Chandigarh)
                   </div>
                   <div className="flex items-center gap-3 text-sm text-gray-400">
                     <Shield className="text-[#D4AF37]" size={18} /> Ethical & Precise Care
@@ -213,7 +225,7 @@ const About = () => {
             <div className="bg-[#1A2B47]/20 border border-gray-800 rounded-[40px] p-8 md:p-12 flex flex-col lg:flex-row gap-10 hover:border-[#D4AF37]/30 transition-all">
               <div className="lg:w-1/4 shrink-0">
                  <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-[#D4AF37]/20 mx-auto">
-                    <img src="/Images/Dr_sonali.jpg" alt="Dr. Sonali Bansal" className="w-full h-full object-cover" />
+                    <img src="/Images/Sonali.jpg" alt="Dr. Sonali Bansal" className="w-full h-full object-cover" />
                  </div>
               </div>
               <div className="flex-1 text-left">
@@ -226,7 +238,7 @@ const About = () => {
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3 text-sm text-gray-400">
-                    <GraduationCap className="text-[#D4AF37]" size={18} /> MDS (Kalinga Institute of Dental Sciences)
+                    <GraduationCap className="text-[#D4AF37]" size={18} /> BDS, MDS(Endodontics, Kalinga Institute of Dental Sciences)
                   </div>
                   <div className="flex items-center gap-3 text-sm text-gray-400">
                     <Microscope className="text-[#D4AF37]" size={18} /> Microendodontics Specialist
@@ -235,6 +247,31 @@ const About = () => {
               </div>
             </div>
 
+
+<div className="bg-[#1A2B47]/20 border border-gray-800 rounded-[40px] p-8 md:p-12 flex flex-col lg:flex-row-reverse gap-10 hover:border-[#D4AF37]/30 transition-all">
+  <div className="lg:w-1/4 shrink-0">
+    <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-[#D4AF37]/20 mx-auto">
+      <img src="/Images/DrAyeshaJain.jpg" alt="Dr. Ayesha Jain" className="w-full h-full object-cover" />
+    </div>
+  </div>
+  <div className="flex-1 text-left">
+    <div className="flex flex-wrap items-center gap-3 mb-4">
+      <h3 className="text-2xl font-bold text-white">Dr. Ayesha Jain</h3>
+      <span className="bg-[#D4AF37]/10 text-[#D4AF37] px-3 py-1 rounded-full text-xs font-bold uppercase">Senior Oral Surgeon</span>
+    </div>
+    <p className="text-gray-300 leading-relaxed mb-6">
+      A distinguished graduate of the prestigious Nair Hospital Dental College, Mumbai. With over 16 years of rich clinical experience, Dr. Jain specializes in surgical excellence, root canal treatments, and aesthetic smile makeovers. Her approach combines clinical precision with an artistic eye to deliver natural-looking, confident smiles.
+    </p>
+    <div className="grid md:grid-cols-2 gap-4">
+      <div className="flex items-center gap-3 text-sm text-gray-400">
+        <GraduationCap className="text-[#D4AF37]" size={18} /> MDS (Nair Hospital Dental College, Mumbai)
+      </div>
+      <div className="flex items-center gap-3 text-sm text-gray-400">
+        <Shield className="text-[#D4AF37]" size={18} /> 16+ Years Clinical Excellence
+      </div>
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </section>
@@ -249,6 +286,7 @@ const About = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

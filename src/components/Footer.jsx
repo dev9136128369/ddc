@@ -5,8 +5,17 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom'; // Agar aap React Router use kar rahe hain
 
+import SEO from '../components/SEO';
+import seoData from '../seoData';
+
 const Footer = () => {
   return (
+<>
+<SEO 
+        title={seoData.home.title} 
+        description={seoData.home.description} 
+        keywords={seoData.home.keywords} 
+      />
     <footer className="w-full bg-gradient-to-b from-[#0A1628] to-[#050B14] text-white relative overflow-hidden">
       {/* Background Glow Effects (Figma Style) */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-[100px]"></div>
@@ -165,6 +174,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
 

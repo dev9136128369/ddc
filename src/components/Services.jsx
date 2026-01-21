@@ -6,6 +6,9 @@ import {
 
 import { Link } from 'react-router-dom';
 
+import SEO from '../components/SEO';
+import seoData from '../seoData';
+
 const Services = () => {
   const allServices = [
     {
@@ -59,6 +62,12 @@ const Services = () => {
   ];
 
   return (
+<>
+<SEO 
+        title={seoData.home.title} 
+        description={seoData.home.description} 
+        keywords={seoData.home.keywords} 
+      />
     <main className="w-full bg-[#050B14] pt-32 pb-20 text-white overflow-hidden">
       
       {/* 1. HEADER SECTION */}
@@ -111,6 +120,7 @@ const Services = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

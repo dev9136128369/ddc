@@ -4,6 +4,9 @@ import {
   Clock, Globe, CircleCheckBig, Sparkles, ShieldCheck, QrCode 
 } from 'lucide-react';
 
+import SEO from '../components/SEO';
+import seoData from '../seoData';
+
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', service: '', message: '' });
 
@@ -20,6 +23,12 @@ const Contact = () => {
   };
 
   return (
+    <>
+    <SEO 
+        title={seoData.home.title} 
+        description={seoData.home.description} 
+        keywords={seoData.home.keywords} 
+      />
     <main className="w-full bg-[#050B14] overflow-hidden">
       
       {/* ================= HERO / HEADER SECTION ================= */}
@@ -93,8 +102,8 @@ const Contact = () => {
                 <NewContactCard 
                   icon={<Clock />}
                   title="Working Hours"
-                  line1="Mon - Sat: 9:00 AM - 8:00 PM"
-                  line2="Sunday: 10:00 AM - 2:00 PM"
+                  line1="Tue - Sat: 9:00 AM - 7:00 PM and Mon - Close"
+                  // line2="Sunday: 10:00 AM - 2:00 PM"
                   highlight="Emergency: 24/7 Available"
                 />
               </div>
@@ -203,6 +212,7 @@ const Contact = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

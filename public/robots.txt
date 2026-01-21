@@ -1,0 +1,10 @@
+# Delhi Dental Clinic Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap link Google Search Console ke liye
+Sitemap: https://www.delhidental.org/sitemap.xml
+
+# Restricted areas (agar koi admin panel ya private route ho)
+Disallow: /admin/
+Disallow: /private/

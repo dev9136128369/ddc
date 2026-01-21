@@ -5,9 +5,17 @@ import {
   Quote, ThumbsUp, Send, Calendar, Microscope, Wifi, GraduationCap ,Users, Mail,CircleCheckBig
 } from 'lucide-react';
 
+import SEO from '../components/SEO';
+import seoData from '../seoData';
+
 import { Link } from 'react-router-dom';
 const Home = () => {
   return (
+    <><SEO 
+        title={seoData.home.title} 
+        description={seoData.home.description} 
+        keywords={seoData.home.keywords} 
+      />
     <main className="w-full bg-[#050B14]">
       
       {/* ================= HERO SECTION ================= */}
@@ -36,7 +44,13 @@ const Home = () => {
               </h1>
               
               <p className="mb-8 text-xl text-[#C0C0C0] leading-relaxed max-w-lg text-left">
-                Experience world-class dental care led by Dr. Nitu Gautam (MDS) with 16+ years of clinical mastery and state-of-the-art technology.
+                Experience world-class dental care led by Dr. Nitu Gautam BDS(nair ,Mumbai),MDS (orthodontics ,IDS)
+Professor(IDS, S’O’A University)
+Fellow (World Federation of Orthodontist)
+Member of peer review board, JCO-IOS
+Editor IOS times
+Reg no-3224/A
+ with 16+ years of clinical mastery and state-of-the-art technology.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-12">
@@ -67,7 +81,7 @@ const Home = () => {
 
             <div className="grid grid-cols-1 gap-6">
               <QuickInfoCard icon={<MapPin />} title="Prime Location" desc="R-241, Ground Floor, G.K-1, New Delhi" sub="Opp. GK-1 Police Station • Free Parking" />
-              <QuickInfoCard icon={<Clock />} title="Flexible Hours" desc="Mon-Sat: 9:00 AM - 8:00 PM" sub="Emergency Services: 24/7 Available" />
+              <QuickInfoCard icon={<Clock />} title="Flexible Hours" desc="Tue-Sat: 9:00 AM - 7:00 PM and Mon - Close" sub="Emergency Services: 24/7 Available" />
               <QuickInfoCard icon={<Phone />} title="Quick Contact" desc="+91 8079797978" sub="WhatsApp: +91 8079797978" />
             </div>
           </div>
@@ -90,7 +104,24 @@ const Home = () => {
             </div>
 
             <div className="space-y-6 text-left">
-              <h2 className="text-4xl font-bold text-[#0A1628]">Dr. Nitu Gautam <span className="text-lg font-medium text-gray-700 font-serif">MDS (Orthodontics)</span></h2>
+              {/* <h2 className="text-4xl font-bold text-[#0A1628]">
+  Dr. Nitu Gautam <span className="text-lg font-medium text-gray-700 font-serif">BDS (Nair, Mumbai), MDS (Orthodontics)</span>
+</h2>
+<p className="text-gray-700 leading-relaxed italic text-left">
+  "Senior Consultant Orthodontist & Professor at IDS, S'O'A University. A Fellow of the World Federation of Orthodontists (WFO) and Editor of IOS Times."
+</p>
+<div className="grid grid-cols-2 gap-4">
+  <div className="p-4 bg-gray-50 rounded-xl border-l-4 border-[#D4AF37] text-left">
+    <div className="text-[#0A1628] font-bold text-xs uppercase">Research & Editorial</div>
+    <div className="text-[11px] text-gray-700">Member of Peer Review Board (JCO-IOS) & Reg No: 3224/A.</div>
+  </div>
+  <div className="p-4 bg-gray-50 rounded-xl border-l-4 border-[#D4AF37] text-left">
+    <div className="text-[#0A1628] font-bold text-xs uppercase">Expertise</div>
+    <div className="text-[11px] text-gray-700">Professor-level mastery in Orthodontics and Implantology.</div>
+  </div>
+</div> */}
+              
+              <h2 className="text-4xl font-bold text-[#0A1628]">Dr. Nitu Gautam <span className="text-sm font-medium text-gray-700 font-serif">BDS(nair ,Mumbai), MDS (orthodontics ,IDS)</span></h2>
               <p className="text-gray-700 leading-relaxed italic text-left">
                 "Dr. Nitu is a highly accomplished professional with over 16 years of clinical experience. She is a graduate of the prestigious Nair Hospital Dental College, Mumbai."
               </p>
@@ -101,7 +132,9 @@ const Home = () => {
                 </div>
                 <div className="p-4 bg-gray-50 rounded-xl border-l-4 border-[#D4AF37] text-left">
                   <div className="text-[#0A1628] font-bold">Academician</div>
-                  <div className="text-sm text-gray-700">Former Faculty at Nair Hospital & Professor at IDS Bhubaneswar.</div>
+                  <div className="text-sm text-gray-700">Former  Professor at (IDS, S’O’A University).</div>
+
+                  {/* <div className="text-sm text-gray-700">Former Faculty at Nair Hospital & Professor at IDS Bhubaneswar.</div> */}
                 </div>
               </div>
               {/* <button className="flex items-center gap-2 text-[#D4AF37] font-bold hover:gap-4 transition-all">
@@ -119,6 +152,14 @@ const Home = () => {
         </div>
       </section>
 
+
+<div className="mt-12 p-6 bg-[#D4AF37]/5 border-l-4 border-[#D4AF37] rounded-r-2xl">
+  <h4 className="text-[#ffffff] font-bold text-lg mb-2">Senior Surgeon Spotlight</h4>
+  <p className="text-white text-sm leading-relaxed italic">
+    Dr. Ayesha Jain, a distinguished graduate of Nair Hospital Mumbai, combines 16+ years of surgical excellence with an artistic approach to deliver natural-looking, confident smiles.
+  </p>
+</div>
+
       {/* ================= SERVICES SECTION ================= */}
       <section id="services" className="py-24 bg-gradient-to-b from-white via-[#E8E8E8]/30 to-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -135,10 +176,10 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard img="/Images/Dental1.jfif" title="Orthodontics" icon={<Shield />} desc="Braces and clear aligners for perfectly aligned smiles by Dr. Nitu Gautam." />
-            <ServiceCard img="/Images/modernclinec.jfif" title="Micro-Endodontics" icon={<Microscope />} desc="Painless Root Canal via advanced magnification by Dr. Sonali Bansal." />
+            <ServiceCard img="/Images/modernclinec.jfif" title="Micro-Endodontics" icon={<Microscope />} desc="Specialized painless Root Canal treatments with clinical precision by Senior Surgeon Dr. Ayesha Jain." />
             <ServiceCard img="/Images/DentailSerzer.jfif" title="Pediatric Care" icon={<Baby />} desc="Gentle behavior management for children by specialist Dr. Ferah Khanna." />
             <ServiceCard img="/Images/Dental2.jfif" title="Prosthodontics" icon={<Heart />} desc="Implants and full mouth rehabilitation by specialist Dr. Vinod Khanna." />
-            <ServiceCard img="/Images/comasticDensti.avif" title="Cosmetic Dentistry" icon={<Sparkles />} desc="Smile makeovers and biomimetic dentistry for a naturally perfect appearance." />
+            <ServiceCard img="/Images/comasticDensti.avif" title="Cosmetic Dentistry" icon={<Sparkles />} desc="Smile makeovers and aesthetic dentistry designed with an artistic eye by Dr. Ayesha Jain." />
             <ServiceCard img="/Images/JenrailDensity.avif" title="General Dentistry" icon={<Smile />} desc="Premium diagnostic checkups and digital dentistry for the whole family." />
           </div>
 
@@ -223,10 +264,19 @@ const Home = () => {
              </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <TeamCard img="/Images/Dr_Ferah.jpg" name="Dr. Ferah Khanna" role="Pediatric Dentist" exp="16+ Years" spec="Advanced Behavior Management" edu="MDS (PGIMER, Chandigarh)" highlight="Specialist in Child Dental Care" />
-            <TeamCard img="/Images/Dr_sonali.jpg" name="Dr. Sonali Bansal" role="Endodontist" exp="Expert" spec="Micro-Endodontics" edu="MDS (Kalinga Institute)" highlight="Trained in Painless Root Canal" />
-            <TeamCard img="/Images/Dr_Vinod.jpg" name="Dr. Vinod Khanna" role="Prosthodontist" exp="Dedicated" spec="Full Mouth Rehabilitation" edu="MDS (PGIMS)" highlight="Expert in Crowns & Aesthetic Dentistry" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+            <TeamCard 
+  img="/Images/DrAyeshaJain.jpg" 
+  name="Dr. Ayesha Jain" 
+  role="Senior Oral Surgeon" 
+  exp="16+ Years Exp" 
+  spec="Surgical Excellence & Smile Makeovers" 
+  edu="MDS (Nair Hospital Dental College, Mumbai)" 
+  highlight="Expert in Root Canal, Aesthetic Dentistry & Surgical Precision" 
+/>
+            <TeamCard img="/Images/Dr_Ferah.jpg" name="Dr. Ferah Khanna" role="Pediatric Dentist" exp="16+ Years" spec="Advanced Behavior Management" edu="BDS,MDS (pedodontics, PGIMER,Chandigarh)" highlight="Specialist in Child Dental Care" />
+            <TeamCard img="/Images/Sonali.jpg" name="Dr. Sonali Bansal" role="Endodontist" exp="Expert" spec="Micro-Endodontics" edu="BDS,MDS(Endodontics, Kalinga Institute of Dental Sciences)" highlight="Specialization in aesthetic dentistry and painless root canal treatments" />
+            <TeamCard img="/Images/Dr_Vinod.jpg" name="Dr. Vinod Khanna" role="Prosthodontist" exp="Dedicated" spec="Full Mouth Rehabilitation" edu="BDS(Government Dental College ),MDS (Prosthodontics, PGIMER,Chandigarh)" highlight="Specialization in full mouth rehabilitation, and aesthetic dentistry" />
           </div>
         </div>
       </section>
@@ -237,11 +287,60 @@ const Home = () => {
           <div className="text-center mb-16 text-left text-white">
             <h2 className="text-4xl font-bold text-center">What Our Patients Say</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+  {/* 1. Dr. Nitu Gautam - Orthodontics */}
+  <TestimonialCard 
+    text="Dr. Nitu Gautam is a true artist of smiles. Her precision with Invisalign and focus on facial harmony is unmatched. With her 16+ years of clinical mastery, my aligner treatment was completely flawless and smooth!" 
+    service="Orthodontics & Aligner" 
+    date="Jan 2026" 
+    name="Anjali Mehta" 
+    location="South Delhi" 
+    initial="A" 
+  />
+
+  {/* 2. Dr. Ayesha Jain - Smile Makeover */}
+  <TestimonialCard 
+    text="I am amazed by Dr. Ayesha Jain's surgical excellence. Coming from Nair Hospital Mumbai, her approach to my smile makeover combined clinical precision with an artistic eye. Highly recommended for premium care!" 
+    service="Smile Makeover & Surgery" 
+    date="Dec 2025" 
+    name="Priya Sharma" 
+    location="Greater Kailash" 
+    initial="P" 
+  />
+
+  {/* 3. Dr. Sonali Bansal - Root Canal */}
+  <TestimonialCard 
+    text="Microscopic RCT by Dr. Sonali was totally painless. Her mastery in magnification technology and biomimetic dentistry saved my natural tooth perfectly. The most comfortable dental experience I have ever had in Delhi." 
+    service="Root Canal Specialist" 
+    date="Nov 2024" 
+    name="Rahul Kapoor" 
+    location="Connaught Place" 
+    initial="R" 
+  />
+
+  {/* 4. Dr. Ferah Khanna - Pediatric */}
+  <TestimonialCard 
+    text="Dr. Ferah is a magician with kids! Her advanced behavior management techniques and gentle care at MAIDS background helped my anxious child stay calm. DDC is definitely the best place for pediatric dental care." 
+    service="Pediatric Dental Care" 
+    date="Oct 2024" 
+    name="Sonia Gupta" 
+    location="Vasant Vihar" 
+    initial="S" 
+  />
+</div>
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <TestimonialCard 
+  text="I am amazed by Dr. Ayesha Jain's surgical excellence. Coming from Nair Hospital Mumbai, her approach to my smile makeover combined clinical precision with an artistic eye. Highly recommended!" 
+  service="Smile Makeover & Surgery" 
+  date="Dec 2025" 
+  name="Priya Sharma" 
+  location="Greater Kailash" 
+  initial="P" 
+/>
             <TestimonialCard text="Dr. Nitu's aligner treatment was flawless. My smile looks amazing now!" service="Orthodontics" date="Dec 2024" name="Anjali Mehta" location="South Delhi" initial="A" />
             <TestimonialCard text="Microscopic RCT by Dr. Sonali was totally painless. Amazing technology used here." service="Root Canal" date="Nov 2024" name="Rahul Kapoor" location="Connaught Place" initial="R" />
             <TestimonialCard text="Dr. Ferah is a magician with kids. My son is no longer afraid of dentists." service="Pediatric" date="Oct 2024" name="Sonia Gupta" location="Vasant Vihar" initial="S" />
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -319,9 +418,9 @@ const Home = () => {
                   title="Working Hours"
                                  details={
     <>
-      <span className="text-[#4d4d4dff] font-bold">Monday - Saturday: 9:00 AM - 8:00 PM</span><br />
+      <span className="text-[#4d4d4dff] font-bold">Tuesday - Saturday: 9:00 AM - 7:00 PM and Mon - Close</span><br />
       
-      <span className="text-[#4d4d4dff] font-bold">Sunday: 10:00 AM - 2:00 PM</span><br />
+      {/* <span className="text-[#4d4d4dff] font-bold">Sunday: 10:00 AM - 2:00 PM</span><br /> */}
       
       <span className="text-blue-400 font-semibold">Emergency: 24/7 Available</span>
     </>
@@ -400,6 +499,7 @@ const Home = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 
