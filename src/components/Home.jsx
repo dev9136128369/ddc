@@ -265,7 +265,11 @@ Reg no-3224/A
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-            <TeamCard 
+      
+            <TeamCard img="/Images/Dr_Ferah.jpg" name="Dr. Ferah Khanna" role="Pediatric Dentist" exp="16+ Years" spec="Advanced Behavior Management" edu="BDS,MDS (pedodontics, PGIMER,Chandigarh)" highlight="Specialist in Child Dental Care" />
+            <TeamCard img="/Images/Sonali.jpg" name="Dr. Sonali Bansal" role="Endodontist" exp="Expert" spec="Micro-Endodontics" edu="BDS,MDS(Endodontics, Kalinga Institute of Dental Sciences)" highlight="Specialization in aesthetic dentistry and painless root canal treatments" />
+            <TeamCard img="/Images/Dr_Vinod.jpg" name="Dr. Vinod Khanna" role="Prosthodontist" exp="Dedicated" spec="Full Mouth Rehabilitation" edu="BDS(Government Dental College ),MDS (Prosthodontics, PGIMER,Chandigarh)" highlight="Specialization in full mouth rehabilitation, and aesthetic dentistry" />
+                <TeamCard 
   img="/Images/DrAyeshaJain.jpg" 
   name="Dr. Ayesha Jain" 
   role="Senior Oral Surgeon" 
@@ -274,9 +278,6 @@ Reg no-3224/A
   edu="MDS (Nair Hospital Dental College, Mumbai)" 
   highlight="Expert in Root Canal, Aesthetic Dentistry & Surgical Precision" 
 />
-            <TeamCard img="/Images/Dr_Ferah.jpg" name="Dr. Ferah Khanna" role="Pediatric Dentist" exp="16+ Years" spec="Advanced Behavior Management" edu="BDS,MDS (pedodontics, PGIMER,Chandigarh)" highlight="Specialist in Child Dental Care" />
-            <TeamCard img="/Images/Sonali.jpg" name="Dr. Sonali Bansal" role="Endodontist" exp="Expert" spec="Micro-Endodontics" edu="BDS,MDS(Endodontics, Kalinga Institute of Dental Sciences)" highlight="Specialization in aesthetic dentistry and painless root canal treatments" />
-            <TeamCard img="/Images/Dr_Vinod.jpg" name="Dr. Vinod Khanna" role="Prosthodontist" exp="Dedicated" spec="Full Mouth Rehabilitation" edu="BDS(Government Dental College ),MDS (Prosthodontics, PGIMER,Chandigarh)" highlight="Specialization in full mouth rehabilitation, and aesthetic dentistry" />
           </div>
         </div>
       </section>
