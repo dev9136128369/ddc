@@ -138,7 +138,7 @@ const Footer = () => {
                 <div className="flex-shrink-0 w-10 h-10 bg-[#1A2B47] border border-[#D4AF37]/30 rounded-lg flex items-center justify-center group-hover:border-[#D4AF37] transition-all duration-300">
                   <Phone size={18} className="text-[#D4AF37]" />
                 </div>
-                <div className="text-sm">+91 8079797978 </div>
+                <div className="text-sm">+91 8079797978 , 011-23657215</div>
               </div>
 
               <div className="flex items-center gap-3 group">

@@ -24,11 +24,11 @@ const Navbar = () => {
             <MapPin size={14} className="text-[#d4af37]" /> New Delhi, India
           </span>
           <span className="flex items-center gap-2 hover:text-[#d4af37] transition-colors cursor-default">
-            <Phone size={14} className="text-[#d4af37]" /> +91 8079797978
+            <Phone size={14} className="text-[#d4af37]" /> +91 8079797978 , 011-23657215 
           </span>
         </div>
         <div className="flex gap-4 uppercase tracking-widest font-bold text-[10px]">
-          <span className="text-[#d4af37] animate-pulse">●</span> Emergency: 24/7 Available
+          <span className="text-[#d4af37] animate-pulse">●</span>
         </div>
       </div>
 

@@ -88,7 +88,7 @@ const Contact = () => {
                   icon={<Phone />}
                   title="Phone Numbers"
                   line1="+91 8079797978"
-                  // line2="011-XXXXXXXX"
+                  line2="011-23657215"
                   highlight="(Emergency Support)"
                 />
 
@@ -104,7 +104,7 @@ const Contact = () => {
                   title="Working Hours"
                   line1="Tue - Sat: 9:00 AM - 7:00 PM and Mon - Close"
                   // line2="Sunday: 10:00 AM - 2:00 PM"
-                  highlight="Emergency: 24/7 Available"
+                  // highlight="Emergency: 24/7 Available"
                 />
               </div>
 
@@ -200,10 +200,10 @@ const Contact = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6 w-full lg:w-auto">
-                <a href="tel:+9180797978" className="px-10 py-5 bg-white text-[#0A1628] rounded-2xl font-extrabold text-center hover:bg-[#D4AF37] hover:text-white transition-all shadow-xl">
+                <a href="tel:+011-23657215" className="px-10 py-5 bg-white text-[#0A1628] rounded-2xl font-extrabold text-center hover:bg-[#D4AF37] hover:text-white transition-all shadow-xl">
                   Call Now
                 </a>
-                <a href="https://wa.me/9180797978" className="px-10 py-5 border-2 border-white/20 text-white rounded-2xl font-extrabold text-center hover:bg-white/10 transition-all">
+                <a href="https://wa.me/918079797978" className="px-10 py-5 border-2 border-white/20 text-white rounded-2xl font-extrabold text-center hover:bg-white/10 transition-all">
                   Chat Support
                 </a>
               </div>

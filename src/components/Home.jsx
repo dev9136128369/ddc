@@ -81,8 +81,8 @@ Reg no-3224/A
 
             <div className="grid grid-cols-1 gap-6">
               <QuickInfoCard icon={<MapPin />} title="Prime Location" desc="R-241, Ground Floor, G.K-1, New Delhi" sub="Opp. GK-1 Police Station • Free Parking" />
-              <QuickInfoCard icon={<Clock />} title="Flexible Hours" desc="Tue-Sat: 9:00 AM - 7:00 PM and Mon - Close" sub="Emergency Services: 24/7 Available" />
-              <QuickInfoCard icon={<Phone />} title="Quick Contact" desc="+91 8079797978" sub="WhatsApp: +91 8079797978" />
+              <QuickInfoCard icon={<Clock />} title="Flexible Hours" desc="Tue-Sat: 9:00 AM - 7:00 PM and Mon - Close"  />
+              <QuickInfoCard icon={<Phone />} title="Quick Contact" desc="+91 8079797978 ,   011-23657215" sub="WhatsApp: +91 8079797978" />
             </div>
           </div>
         </div>
@@ -395,7 +395,7 @@ Reg no-3224/A
     details={
       <>
         <span className="text-[#4d4d4dff] font-bold">+91 8079797978,</span><br />
-        {/* <span className="text-[#4d4d4dff] font-bold">011-XXXXXXXX</span><br /> */}
+        <span className="text-[#4d4d4dff] font-bold">011-23657215</span><br />
         <span className="text-blue-400 font-semibold">(Emergency Support)</span>
       </>
     }
@@ -418,11 +418,11 @@ Reg no-3224/A
                   title="Working Hours"
                                  details={
     <>
-      <span className="text-[#4d4d4dff] font-bold">Tuesday - Saturday: 9:00 AM - 7:00 PM and Mon - Close</span><br />
+      <span className="text-[#4d4d4dff] font-bold">Tuesday - Saturday: 9:00 AM - 7:00 PM and Monday - Close</span><br />
       
       {/* <span className="text-[#4d4d4dff] font-bold">Sunday: 10:00 AM - 2:00 PM</span><br /> */}
       
-      <span className="text-blue-400 font-semibold">Emergency: 24/7 Available</span>
+      {/* <span className="text-blue-400 font-semibold">Emergency: 24/7 Available</span> */}
     </>
   }
                 />
@@ -434,7 +434,7 @@ Reg no-3224/A
               <div className="bg-gradient-to-br from-[#0A1628] to-[#1A2B47] rounded-2xl p-6 border border-[#D4AF37]/30 shadow-xl">
                 <h4 className="text-white font-bold mb-4">Why Choose Us?</h4>
                 <div className="space-y-3">
-                  {["Free Parking Available", "Metro Connected Location", "Same Day Appointments", "Evening & Weekend Slots"].map((text) => (
+                  {["Experienced Dentists", "Advanced Technology", "Complete Dental Solutions", "Hygiene & Safety First", "Affordable & Transparent Pricing", "Patient-Friendly Environment"].map((text) => (
                     <div key={text} className="flex items-center gap-3 text-[#E8E8E8]">
                       <CircleCheckBig size={20} className="text-[#D4AF37] shrink-0" />
                       <span className="text-sm">{text}</span>
