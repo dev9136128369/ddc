@@ -110,7 +110,7 @@ const Contact = () => {
 
               {/* Professional WhatsApp Integration */}
               <a 
-                href="https://wa.me/9180797978?text=Hi, I want to book an appointment at Delhi Dental Clinic."
+                href="https://wa.me/918079797978?text=Hi, I want to book an appointment at Delhi Dental Clinic."
                 target="_blank"
                 className="flex items-center justify-between p-6 bg-gradient-to-r from-[#25D366] to-[#128C7E] rounded-3xl text-white font-bold text-lg hover:shadow-2xl hover:shadow-green-500/20 transition-all transform hover:-translate-y-1 group"
               >
