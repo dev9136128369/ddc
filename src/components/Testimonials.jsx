@@ -25,6 +25,8 @@ const Testimonials = () => {
         "/Images/mouth.jpg",
        "/Images/SHREYASI_CEPH.jpg",
         "/Images/SHREYASI_SAHOO.jpg",
+        "/Images/Netu/Ne1.jpg",
+
       ],
       initial: "A",
       rating: 5
@@ -82,7 +84,14 @@ const Testimonials = () => {
       service: "Visible Braces",
       date: "September 2025",
       text: "Coming from Nair Hospital Dental College background, Dr. Nitu's clinical integration of advanced orthodontic science is evident. My braces treatment has been smooth and very professional.",
-      gallery: [],
+        gallery: [
+        "/Images/Netu/Ne2.jpg",
+"/Images/Netu/Ne3.jpg",
+"/Images/Netu/Ne4.jpg",
+"/Images/Netu/Ne5.jpg",
+"/Images/Netu/Ne6.jpg",
+
+      ],
       initial: "P",
       rating: 5
     },

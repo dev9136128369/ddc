@@ -16,7 +16,9 @@ const About = () => {
     "/Images/Group.jpg",
     "/Images/Avoad.jpg",
     "/Images/Puruskar.jpg",
-    "/Images/Group_2.jpg",
+    "/Images/Semainar.jpg",
+
+    // "/Images/Group_2.jpg",
     "/Images/Pragantation.jpg"
   ];
 
