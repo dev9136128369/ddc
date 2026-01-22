@@ -54,11 +54,11 @@ const Testimonials = () => {
       date: "November 2025",
       text: "Dr. Ferah is a magician with kids! Her advanced behavior management techniques helped my anxious child stay calm. DDC is definitely the best place for pediatric dental care in Delhi.",
         gallery: [
-        "/Images/Fraha/Fr1.jpg",
-        "/Images/Fraha/Fr2.jpg",
-        "/Images/Fraha/Fr3.jpg",
-        "/Images/Fraha/Fr4.jpg",
-        "/Images/Fraha/Fr5.jpg"
+        "/Images/Fraha/Fr1.png",
+        "/Images/Fraha/Fr2.png",
+        "/Images/Fraha/Fr3.png",
+        "/Images/Fraha/Fr4.png",
+        "/Images/Fraha/Fr5.png"
       ],
       initial: "S",
       rating: 5
