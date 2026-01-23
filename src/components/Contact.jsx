@@ -96,7 +96,7 @@ const Contact = () => {
                   icon={<Globe />}
                   title="Online Presence"
                   line1="www.delhidental.org"
-                  line2="info@delhidental.org"
+                  line2="delhidentalclinicindia@gmail.com"
                 />
 
                 <NewContactCard 

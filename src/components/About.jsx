@@ -49,7 +49,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/5 text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-6">
-              <Award size={14} /> Creating Smiles, Changing Lives
+              <Award size={14} /> CREATING SMILES, CHANGING LIVES
             </div>
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-gray-200 to-[#D4AF37] bg-clip-text text-transparent mb-8">
               Pioneering Premium <br /> Dental Excellence in New Delhi

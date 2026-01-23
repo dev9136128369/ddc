@@ -36,7 +36,7 @@ const Home = () => {
             <div className="text-white text-left">
               <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full px-4 py-2 mb-6">
                 <Award className="w-4 h-4 text-[#D4AF37]" />
-                <span className="text-[#D4AF37] text-sm font-medium italic">Creating Smiles, Changing Lives</span>
+                <span className="text-[#D4AF37] text-sm font-medium italic">CREATING SMILES, CHANGING LIVES</span>
               </div>
               
               <h1 className="mb-6 bg-gradient-to-r from-white via-[#E8E8E8] to-[#C0C0C0] bg-clip-text text-transparent text-5xl md:text-7xl font-bold leading-tight">
@@ -411,7 +411,7 @@ Reg no-3224/A
     details={
       <>
         <span className="text-[#4d4d4dff] font-bold">www.delhidental.org</span><br />
-        <span className="text-[#4d4d4dff] font-bold ">info@delhidental.org</span>
+        <span className="text-[#4d4d4dff] font-bold ">delhidentalclinicindia@gmail.com</span>
       </>
     }
   />

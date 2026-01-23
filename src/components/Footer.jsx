@@ -149,7 +149,7 @@ const Footer = () => {
                 <div className="flex-shrink-0 w-10 h-10 bg-[#1A2B47] border border-[#D4AF37]/30 rounded-lg flex items-center justify-center group-hover:border-[#D4AF37] transition-all duration-300">
                   <Mail size={18} className="text-[#D4AF37]" />
                 </div>
-                <div className="text-sm">info@delhidental.org</div>
+                <div className="text-sm">delhidentalclinicindia@gmail.com</div>
               </div>
             </div>
           </div>
