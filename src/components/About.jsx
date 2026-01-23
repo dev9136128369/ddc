@@ -49,7 +49,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/5 text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-6">
-              <Award size={14} /> Crafting Smile • Delhi Dental Clinic
+              <Award size={14} /> Creating Smiles, Changing Lives
             </div>
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-gray-200 to-[#D4AF37] bg-clip-text text-transparent mb-8">
               Pioneering Premium <br /> Dental Excellence in New Delhi
@@ -152,7 +152,7 @@ const About = () => {
                     <Star size={18} /> Academic Career
                   </h4>
                   <p className="text-gray-400 text-sm leading-relaxed">
-                    Former Professor in Orthodontics. Deeply involved in curriculum development, postgraduate training, and research guidance with numerous international publications.
+                    Former Professor in Orthodontics. Deeply involved in curriculum development, postgraduate training, and research guidance with numerous National and international publications.
                   </p>
                 </div>
               </div>

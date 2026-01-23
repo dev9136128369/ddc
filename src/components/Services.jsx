@@ -15,7 +15,7 @@ const Services = () => {
   const allServices = [
     {
       title: "Orthodontics & Braces",
-      image: "/Images/Dental1.jfif", // Braces Image
+      image: "/Images/orthdodontics.jpeg", // Braces Image
       desc: "Specialized treatment using visible and invisible braces, and advanced clear aligner therapy to enhance facial aesthetics.",
       icon: <Shield />,
       tags: ["Invisalign", "Metal Braces", "Clear Aligners"],
@@ -35,7 +35,7 @@ const Services = () => {
     },
     {
       title: "Micro-Endodontics",
-      image: "/Images/modernclinec.jfif", // RCT/Microscope Image
+      image: "/Images/microend.jpeg", // RCT/Microscope Image
       desc: "Painless root canal treatments using advanced magnification and precision techniques for long-term clinical success.",
       icon: <Microscope />,
       tags: ["Painless RCT", "Magnification", "Biomimetic"],
@@ -73,7 +73,7 @@ const Services = () => {
     },
     {
       title: "Pediatric Dentistry",
-      image: "/Images/DentailSerzer.jfif", // Kids Dentistry Image
+      image: "/Images/Pediatriccare.jpeg", // Kids Dentistry Image
       desc: "Exclusive child dental care with advanced behavior management to ensure a stress-free experience for infants and toddlers.",
       icon: <Baby />,
       tags: ["Child Specialist", "Sedation", "Kids Care"],
@@ -88,7 +88,7 @@ const Services = () => {
     },
     {
       title: "Cosmetic Dentistry",
-      image: "/Images/comasticDensti.avif", // Whitening/Veneers Image
+      image: "/Images/SmileDesign.jpeg", // Whitening/Veneers Image
       // desc: "Transform your smile with aesthetic excellence, including premium veneers and professional teeth whitening.",
       desc: "Transform your smile with world-class aesthetic excellence. Dr. Ayesha Jain (Senior Oral Surgeon & Nair Hospital Alumna) combines surgical precision with a refined artistic eye to design vibrant, natural-looking smiles. Whether you need premium porcelain veneers, biological teeth whitening, or complete smile reconstruction, we use Digital Smile Design (DSD) to show you your future smile before the treatment even begins.",
       icon: <Sparkles />,

@@ -103,9 +103,13 @@ const Footer = () => {
                 { name: 'General Dentistry', path: '/Services' },
                 { name: 'Cosmetic Dentistry', path: '/Services' },
                 { name: 'Orthodontics', path: '/Services' },
+                { name: 'Invisalign', path: '/Services' },
+
                 { name: 'Root Canal', path: '/Services' },
                 { name: 'Dental Implants', path: '/Services' },
-                { name: 'Pediatric Care', path: '/Services' }
+                { name: 'Pediatric Care', path: '/Services' },
+                { name: 'Smile Design', path: '/Services' }
+
               ].map((service) => (
                 <li key={service.name}>
                   <Link to={service.path} className="hover:text-[#D4AF37] transition-colors duration-300 inline-flex items-center gap-2 group text-sm">

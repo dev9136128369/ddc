@@ -36,7 +36,7 @@ const Home = () => {
             <div className="text-white text-left">
               <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full px-4 py-2 mb-6">
                 <Award className="w-4 h-4 text-[#D4AF37]" />
-                <span className="text-[#D4AF37] text-sm font-medium italic">Crafting Smile • Delhi Dental Clinic</span>
+                <span className="text-[#D4AF37] text-sm font-medium italic">Creating Smiles, Changing Lives</span>
               </div>
               
               <h1 className="mb-6 bg-gradient-to-r from-white via-[#E8E8E8] to-[#C0C0C0] bg-clip-text text-transparent text-5xl md:text-7xl font-bold leading-tight">
@@ -153,12 +153,12 @@ Reg no-3224/A
       </section>
 
 
-<div className="mt-12 p-6 bg-[#D4AF37]/5 border-l-4 border-[#D4AF37] rounded-r-2xl">
+{/* <div className="mt-12 p-6 bg-[#D4AF37]/5 border-l-4 border-[#D4AF37] rounded-r-2xl">
   <h4 className="text-[#ffffff] font-bold text-lg mb-2">Senior Surgeon Spotlight</h4>
   <p className="text-white text-sm leading-relaxed italic">
     Dr. Ayesha Jain, a distinguished graduate of Nair Hospital Mumbai, combines 16+ years of surgical excellence with an artistic approach to deliver natural-looking, confident smiles.
   </p>
-</div>
+</div> */}
 
       {/* ================= SERVICES SECTION ================= */}
       <section id="services" className="py-24 bg-gradient-to-b from-white via-[#E8E8E8]/30 to-white relative overflow-hidden">
@@ -175,11 +175,11 @@ Reg no-3224/A
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard img="/Images/Dental1.jfif" title="Orthodontics" icon={<Shield />} desc="Braces and clear aligners for perfectly aligned smiles by Dr. Nitu Gautam." />
-            <ServiceCard img="/Images/modernclinec.jfif" title="Micro-Endodontics" icon={<Microscope />} desc="Specialized painless Root Canal treatments with clinical precision by Senior Surgeon Dr. Ayesha Jain." />
-            <ServiceCard img="/Images/DentailSerzer.jfif" title="Pediatric Care" icon={<Baby />} desc="Gentle behavior management for children by specialist Dr. Ferah Khanna." />
+            <ServiceCard img="/Images/orthdodontics.jpeg" title="Orthodontics" icon={<Shield />} desc="Braces and Invisalign for perfectly aligned smiles by Dr. Nitu Gautam." />
+            <ServiceCard img="/Images/microend.jpeg" title="Micro-Endodontics" icon={<Microscope />} desc="Specialized painless Root Canal treatments with clinical precision by Senior Surgeon Dr. Sonali Bansal." />
+            <ServiceCard img="/Images/Pediatriccare.jpeg" title="Pediatric Care" icon={<Baby />} desc="Gentle behavior management for children by specialist Dr. Ferah Khanna." />
             <ServiceCard img="/Images/Dental2.jfif" title="Prosthodontics" icon={<Heart />} desc="Implants and full mouth rehabilitation by specialist Dr. Vinod Khanna." />
-            <ServiceCard img="/Images/comasticDensti.avif" title="Cosmetic Dentistry" icon={<Sparkles />} desc="Smile makeovers and aesthetic dentistry designed with an artistic eye by Dr. Ayesha Jain." />
+            <ServiceCard img="/Images/SmileDesign.jpeg" title="Cosmetic Dentistry" icon={<Sparkles />} desc="Smile makeovers and aesthetic dentistry designed with an artistic eye by Dr. Ayesha Jain." />
             <ServiceCard img="/Images/JenrailDensity.avif" title="General Dentistry" icon={<Smile />} desc="Premium diagnostic checkups and digital dentistry for the whole family." />
           </div>
 
