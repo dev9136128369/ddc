@@ -273,7 +273,7 @@ Reg no-3224/A
   img="/Images/DrAyeshaJain.jpg" 
   name="Dr. Ayesha Jain" 
   role="Senior Oral Surgeon" 
-  exp="16+ Years Exp" 
+  // exp="16+ Years Exp" 
   spec="Surgical Excellence & Smile Makeovers" 
   edu="BDS (Nair Hospital Dental College, Mumbai)" 
 

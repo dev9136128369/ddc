@@ -269,7 +269,7 @@ const About = () => {
         <GraduationCap className="text-[#D4AF37]" size={18} /> BDS (Nair Hospital Dental College, Mumbai)
       </div>
       <div className="flex items-center gap-3 text-sm text-gray-400">
-        <Shield className="text-[#D4AF37]" size={18} /> 16+ Years Clinical Excellence
+        {/* <Shield className="text-[#D4AF37]" size={18} /> 16+ Years Clinical Excellence */}
       </div>
     </div>
   </div>
