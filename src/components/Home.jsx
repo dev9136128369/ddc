@@ -275,7 +275,9 @@ Reg no-3224/A
   role="Senior Oral Surgeon" 
   exp="16+ Years Exp" 
   spec="Surgical Excellence & Smile Makeovers" 
-  edu="MDS (Nair Hospital Dental College, Mumbai)" 
+  edu="BDS (Nair Hospital Dental College, Mumbai)" 
+
+  // edu="MDS (Nair Hospital Dental College, Mumbai)" 
   highlight="Expert in Root Canal, Aesthetic Dentistry & Surgical Precision" 
 />
           </div>

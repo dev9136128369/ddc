@@ -28,7 +28,7 @@ const OurTeam = () => {
       name: "Dr. Ayesha Jain",
       role: "Senior Oral Surgeon",
       exp: "16+ Years Experience",
-      edu: "MDS (Oral Surgery)",
+      edu: "BDS (Oral Surgery)",
       college: "Nair Hospital Dental College, Mumbai",
       spec: "Root Canal, Aesthetic Dentistry & Smile Makeovers",
       highlight: "Combines clinical precision with an artistic eye for natural-looking smiles.",

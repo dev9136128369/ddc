@@ -266,7 +266,7 @@ const About = () => {
     </p>
     <div className="grid md:grid-cols-2 gap-4">
       <div className="flex items-center gap-3 text-sm text-gray-400">
-        <GraduationCap className="text-[#D4AF37]" size={18} /> MDS (Nair Hospital Dental College, Mumbai)
+        <GraduationCap className="text-[#D4AF37]" size={18} /> BDS (Nair Hospital Dental College, Mumbai)
       </div>
       <div className="flex items-center gap-3 text-sm text-gray-400">
         <Shield className="text-[#D4AF37]" size={18} /> 16+ Years Clinical Excellence
