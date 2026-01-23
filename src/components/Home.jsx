@@ -176,7 +176,7 @@ Reg no-3224/A
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard img="/Images/orthdodontics.jpeg" title="Orthodontics" icon={<Shield />} desc="Braces and Invisalign for perfectly aligned smiles by Dr. Nitu Gautam." />
-            <ServiceCard img="/Images/microend.jpeg" title="Micro-Endodontics" icon={<Microscope />} desc="Specialized painless Root Canal treatments with clinical precision by Senior Surgeon Dr. Sonali Bansal." />
+            <ServiceCard img="/Images/microend.jpeg" title="Micro-Endodontics" icon={<Microscope />} desc="Specialized painless Root Canal treatments with clinical precision by Dr. Sonali Bansal." />
             <ServiceCard img="/Images/Pediatriccare.jpeg" title="Pediatric Care" icon={<Baby />} desc="Gentle behavior management for children by specialist Dr. Ferah Khanna." />
             <ServiceCard img="/Images/Dental2.jfif" title="Prosthodontics" icon={<Heart />} desc="Implants and full mouth rehabilitation by specialist Dr. Vinod Khanna." />
             <ServiceCard img="/Images/SmileDesign.jpeg" title="Cosmetic Dentistry" icon={<Sparkles />} desc="Smile makeovers and aesthetic dentistry designed with an artistic eye by Dr. Ayesha Jain." />

@@ -97,7 +97,7 @@ const About = () => {
                 Located in the heart of Greater Kailash-I, our clinical practice is distinguished by a strong integration of advanced orthodontic science, precision dentistry, and aesthetic excellence.
               </p>
               <div className="grid grid-cols-2 gap-6">
-                <ContactInfo icon={<MapPin />} title="Location" val="G.K-I, New Delhi" />
+                <ContactInfo icon={<MapPin />} title="Location" val="R-241, GK-1 New Delhi" />
                 <ContactInfo icon={<Phone />} title="Contact" val="+91 8079797978 , 011-23657215"  />
                 <ContactInfo icon={<Globe />} title="Website" val="www.delhidental.org" />
                 <ContactInfo icon={<Heart />} title="Mission" val="Creating Smiles, Changing Lives" />
