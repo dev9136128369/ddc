@@ -101,7 +101,7 @@ const About = () => {
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <ContactInfo icon={<MapPin />} title="Location" val="R-241, GK-1 New Delhi" />
-                <ContactInfo icon={<Phone />} title="Contact" val="+91 80-79-79-79-78 , 011-410-16-309"  />
+                <ContactInfo icon={<Phone />} title="Contact" val={<>+91 80-79-79-79-78 <br /> 011-410-16-309</>}  />
                 <ContactInfo icon={<Globe />} title="Website" val="www.delhidental.org" />
                 {/* <ContactInfo icon={<Heart />} title="Mission" val="Creating Smiles, Changing Lives" /> */}
                 <ContactInfo icon={<Heart />} title="Mission" val="Creating Smile, Changing Life" />
@@ -124,8 +124,8 @@ const About = () => {
                 </div>
                 <div className="mt-8 text-left">
                   <h3 className="text-2xl font-bold text-[#D4AF37]">Dr. Nitu Gautam</h3>
-                  <p className="text-gray-400 font-medium">BDS(Nair ,Mumbai),<br/> MDS(orthodontics ,IDS)</p>
-                  <p className="text-white font-bold mt-2 italic text-sm">Fellowship of the World Federation of Orthodontists (WFO)</p>
+                  <p className="text-gray-400 font-medium">BDS (Nair ,Mumbai),<br/> MDS (Orthodontics ,IDS)</p>
+                  <p className="text-white font-bold mt-2  text-sm">Fellowship of the World Federation of Orthodontists (WFO)</p>
                 </div>
               </div>
             </div>
@@ -193,7 +193,7 @@ const About = () => {
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3 text-sm text-gray-400">
-                    <GraduationCap className="text-[#D4AF37]" size={18} /> BDS, <br/>MDS (pedodontics, PGIMER,Chandigarh)
+                    <GraduationCap className="text-[#D4AF37]" size={18} /> BDS <br/>MDS (Pedodontics, PGIMER,Chandigarh)
                   </div>
                   <div className="flex items-center gap-3 text-sm text-gray-400">
                     <Baby className="text-[#D4AF37]" size={18} /> Child-Friendly Behavior Expert
@@ -219,7 +219,7 @@ const About = () => {
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3 text-sm text-gray-400">
-                    <GraduationCap className="text-[#D4AF37]" size={18} /> BDS(Government Dental College ), <br/> MDS(Prosthodontics, PGIMER,Chandigarh)
+                    <GraduationCap className="text-[#D4AF37]" size={18} /> BDS (Government Dental College ), <br/> MDS (Prosthodontics, PGIMER,Chandigarh)
                   </div>
                   <div className="flex items-center gap-3 text-sm text-gray-400">
                     <Shield className="text-[#D4AF37]" size={18} /> Ethical & Precise Care
@@ -245,7 +245,7 @@ const About = () => {
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3 text-sm text-gray-400">
-                    <GraduationCap className="text-[#D4AF37]" size={18} /> BDS, <br/> MDS(Endodontics, Kalinga Institute of Dental Sciences)
+                    <GraduationCap className="text-[#D4AF37]" size={18} /> BDS <br/> MDS (Endodontics, Kalinga Institute of Dental Sciences)
                   </div>
                   <div className="flex items-center gap-3 text-sm text-gray-400">
                     <Microscope className="text-[#D4AF37]" size={18} /> Microendodontics Specialist
@@ -303,7 +303,7 @@ const ContactInfo = ({ icon, title, val }) => (
       {React.cloneElement(icon, { size: 18 })}
     </div>
     <div>
-      <p className="text-[10px] text-gray-500 uppercase font-bold tracking-widest">{title}</p>
+      <p className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">{title}</p>
       <p className="text-white text-sm font-medium">{val}</p>
     </div>
   </div>

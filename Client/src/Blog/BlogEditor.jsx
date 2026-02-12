@@ -13,7 +13,9 @@ const BlogEditor = ({ blog: existingBlog, onSuccess, onCancel }) => {
   const activeId = id || existingBlog?._id;
   const isEditMode = !!activeId;
 
-  const API_BASE_URL = 'http://localhost:5000/api';
+  // const API_BASE_URL = 'http://localhost:5000/api';
+  const API_BASE_URL = 'https://ddc-backend-ufaf.onrender.com/api';
+
 
   // --- State ---
   const [title, setTitle] = useState('');

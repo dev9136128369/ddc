@@ -102,44 +102,29 @@ const { user, logout } = useUser();
             ))}
           </div>
 
- <div className="hidden xl:block">
-            {user ? (
-              <div className="flex items-center gap-4">
-                {/* Dashboard Link for Admin */}
-                {user.email === "support@ciphererp.com" && (
-                  <Link
-                    to="/ManagementDashboard"
-                    onClick={handleLinkClick}
-                    className="text-sm font-medium text-white hover:text-[#F68D22]"
-                  >
-                    Dashboard
-                  </Link>
-                )}
-                {/* Logout Button */}
-                <button
-                  onClick={handleLogout}
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold ring-offset-background transition-all duration-300 bg-white/10 text-white hover:bg-white/20 h-9 rounded-lg px-4"
-                >
-                  Logout
-                </button>
-              </div>
-            ) : (
-              /* Login Button (Styled like Book Strategy Call) */
-              <Link
-                to="/LoginPage"
-                onClick={handleLinkClick}
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold ring-offset-background transition-all duration-300 bg-gradient-to-r from-[#F68D22] to-[#244C68] text-white shadow-lg hover:shadow-xl hover:scale-105 h-9 rounded-lg px-6"
-              >
-                Login
-              </Link>
-            )}
-          </div>
-          {/* Right Action Button */}
-          <div className="hidden lg:block">
-            <Link to="/Contact" className="bg-[#d4af37] hover:bg-[#b8962e] text-[#0a1122] px-7 py-3 rounded-md font-bold text-sm transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
-              <Calendar size={16} /> Book Now
-            </Link>
-          </div>
+ {/* Desktop Right Actions Combined */}
+<div className="hidden lg:flex items-center gap-4">
+  {user ? (
+    <div className="flex items-center gap-3">
+      {user.email === "delhidentalclinicindia@gmail.com" && (
+        <Link to="/ManagementDashboard" className="text-sm font-medium text-white hover:text-[#d4af37]">
+          Dashboard
+        </Link>
+      )}
+      <button onClick={handleLogout} className="text-sm font-semibold bg-white/10 text-white hover:bg-white/20 h-9 rounded-lg px-4 transition-all">
+        Logout
+      </button>
+    </div>
+  ) : (
+    <Link to="/LoginPage" className="text-sm font-semibold bg-gradient-to-r from-[#F68D22] to-[#244C68] text-white h-9 rounded-lg px-5 flex items-center hover:scale-105 transition-all">
+      Login
+    </Link>
+  )}
+  
+  <Link to="/Contact" className="bg-[#d4af37] hover:bg-[#b8962e] text-[#0a1122] px-6 py-2.5 rounded-md font-bold text-sm transition-all flex items-center gap-2">
+    <Calendar size={16} /> Book Now
+  </Link>
+</div>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center">
@@ -156,21 +141,42 @@ const { user, logout } = useUser();
       {/* 3. MOBILE MENU OVERLAY */}
       <div className={`lg:hidden fixed inset-0 bg-[#0a1122] z-[60] transition-transform duration-500 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex flex-col h-full p-6">
-          <div className="flex justify-between items-center mb-10">
+          <div className="flex justify-between items-center mb-3">
              <div className="text-[#d4af37] font-bold text-2xl">DDC</div>
              <button onClick={() => setIsOpen(false)} className="text-[#d4af37]"><X size={35} /></button>
           </div>
-         <div className="flex flex-col gap-6 text-center">
+         <div className="flex flex-col gap-2 text-center">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.href} // 4. Mobile mein bhi 'to' use kiya
-                className="text-xl font-semibold text-gray-200 hover:text-[#d4af37]"
+                className="text-lg font-semibold text-gray-200 hover:text-[#d4af37]"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
+
+{/* Mobile Menu Actions Section */}
+<div className="mt-4 pt-4 border-t border-gray-800">
+  {user ? (
+    <div className="flex flex-col gap-4">
+      {user.email === "delhidentalclinicindia@gmail.com" && (
+        <Link to="/ManagementDashboard" className="text-xl text-white" onClick={handleLinkClick}>
+          Dashboard
+        </Link>
+      )}
+      <button onClick={handleLogout} className="bg-red-500/20 text-red-500 px-6 py-4 rounded-lg font-bold text-lg">
+        Logout
+      </button>
+    </div>
+  ) : (
+    <Link to="/LoginPage" onClick={handleLinkClick} className="bg-blue-600 text-white px-6 py-4 rounded-lg font-bold text-lg text-center">
+      Login to Portal
+    </Link>
+  )}
+</div>
+
             <Link to="/Contact" onClick={() => setIsOpen(false)} className="mt-6 bg-[#d4af37] text-[#0a1122] px-6 py-4 rounded-lg font-bold text-lg text-center">
                Book Appointment
             </Link>

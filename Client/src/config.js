@@ -14,7 +14,7 @@
 
 export const API_CONFIG = {
   // BASE_URL: "http://localhost:5000", // Your backend URL
-  BASE_URL: "https://ciphershieldwebserver.onrender.com", // Your backend URL
+  BASE_URL: "https://ddc-backend-ufaf.onrender.com", // Your backend URL
   
   ENDPOINTS: {
     LOGIN: "/auth/login",

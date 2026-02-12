@@ -5,7 +5,9 @@ import axios from 'axios';
 import { ArrowLeft, Calendar, AlertCircle, Loader2 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+// const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://ddc-backend-ufaf.onrender.com/api';
+
 
 const BlogDetail = () => {
   const { id } = useParams();

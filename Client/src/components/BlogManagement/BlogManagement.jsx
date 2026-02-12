@@ -5,7 +5,8 @@ import axios from 'axios';
 import { Edit2, Trash2, Plus, ArrowLeft, AlertCircle, Calendar, X, ImageOff, Loader2 } from 'lucide-react';
 import BlogEditor from '../../Blog/BlogEditor';
 
-const API_BASE_URL = 'http://localhost:5000/api'; 
+// const API_BASE_URL = 'http://localhost:5000/api'; 
+const API_BASE_URL = 'https://ddc-backend-ufaf.onrender.com/api'; 
 
 const BlogManagement = () => {
   const [blogs, setBlogs] = useState([]);

@@ -25,7 +25,7 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   setIsSubmitting(true);
   try {
-    const response = await fetch('http://localhost:5000/api/contact', {
+    const response = await fetch('https://ddc-backend-ufaf.onrender.com/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
@@ -74,8 +74,8 @@ const handleSubmit = async (e) => {
                 Delhi's Premier <br /> Dental Excellence
               </h1>
               
-              <p className="mb-8 text-xl text-[#C0C0C0] leading-relaxed max-w-lg text-left">
-                Experience world-class dental care led by Dr. Nitu Gautam BDS(Nair ,Mumbai),MDS (orthodontics ,IDS)
+              <p className="mb-8 text-xl text-[#C0C0C0]  leading-relaxed max-w-lg text-left">
+                Experience world-class dental care led by Dr. Nitu Gautam BDS(Nair ,Mumbai),MDS (Orthodontics ,IDS)
 Professor(IDS, S’O’A University)
 Fellow (World Federation of Orthodontist)
 Member of peer review board, JCO-IOS
@@ -152,7 +152,7 @@ Reg no-3224/A
   </div>
 </div> */}
               
-              <h2 className="text-4xl font-bold text-[#0A1628]">Dr. Nitu Gautam <span className="text-sm font-medium text-gray-700 font-serif">BDS(Nair ,Mumbai), MDS (orthodontics ,IDS)</span></h2>
+              <h2 className="text-4xl font-bold text-[#0A1628]">Dr. Nitu Gautam <span className="text-sm font-medium text-gray-700 font-serif">BDS(Nair ,Mumbai), MDS(Orthodontics ,IDS)</span></h2>
               <p className="text-gray-700 leading-relaxed italic text-left">
                 "Dr. Nitu is a highly accomplished professional with over 16 years of clinical experience. She is a graduate of the prestigious Nair Hospital Dental College, Mumbai."
               </p>
@@ -304,16 +304,16 @@ Reg no-3224/A
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
       
-            <TeamCard img="/Images/Dr_Ferah.jpg" name="Dr. Ferah Khanna" role="Pediatric Dentist" exp="16+ Years" spec="Advanced Behavior Management" edu={`BDS,\nMDS, \n(pedodontics, PGIMER,Chandigarh)`} highlight="Specialist in Child Dental Care" />
-            <TeamCard img="/Images/Sonali.jpg" name="Dr. Sonali Bansal" role="Endodontist" exp="Expert" spec="Micro-Endodontics" edu={`BDS,\nMDS, \n(Endodontics, Kalinga Institute of Dental Sciences)`} highlight="Specialization in aesthetic dentistry and painless root canal treatments" />
-            <TeamCard img="/Images/Dr_Vinod.jpg" name="Dr. Vinod Khanna" role="Prosthodontist" exp="Dedicated" spec="Full Mouth Rehabilitation" edu={`BDS, \n(Government Dental College ), \nMDS, \n(Prosthodontics, PGIMER,Chandigarh)`} highlight="Specialization in full mouth rehabilitation, and aesthetic dentistry" />
+            <TeamCard img="/Images/Dr_Ferah.jpg" name="Dr. Ferah Khanna" role="Pediatric Dentist" exp="16+ Years" spec="Advanced Behavior Management" edu={`BDS \nMDS \n(Pedodontics, PGIMER,Chandigarh)`} highlight="Specialist in Child Dental Care" />
+            <TeamCard img="/Images/Sonali.jpg" name="Dr. Sonali Bansal" role="Endodontist" exp="Expert" spec="Micro-Endodontics" edu={`BDS \nMDS \n(Endodontics, Kalinga Institute of Dental Sciences)`} highlight="Specialization in aesthetic dentistry and painless root canal treatments" />
+            <TeamCard img="/Images/Dr_Vinod.jpg" name="Dr. Vinod Khanna" role="Prosthodontist" exp="Dedicated" spec="Full Mouth Rehabilitation" edu={`BDS \n(Government Dental College ), \nMDS \n(Prosthodontics, PGIMER,Chandigarh)`} highlight="Specialization in full mouth rehabilitation, and aesthetic dentistry" />
                 <TeamCard 
   img="/Images/DrAyeshaJain.jpg" 
   name="Dr. Ayesha Jain" 
   role="Senior Oral Surgeon" 
   // exp="16+ Years Exp" 
   spec="Surgical Excellence & Smile Makeovers" 
-  edu={`BDS, \n (Nair Hospital Dental College, Mumbai)`} 
+  edu={`BDS \n (Nair Hospital Dental College, Mumbai)`} 
 
   // edu="MDS (Nair Hospital Dental College, Mumbai)" 
   highlight="Expert in Root Canal, Aesthetic Dentistry & Surgical Precision" 
@@ -422,7 +422,7 @@ Reg no-3224/A
       <>
         <span className="text-[#4d4d4dff] font-bold">R-241, Ground Floor, G.K-1,</span><br />
         <span className="text-[#4d4d4dff] font-bold">Opp. GK-1 Police Station, New Delhi - 110048</span><br />
-        <a href="https://share.google/6A7CQMKjflxTbhmo4" target="_blank" className="text-blue-400 font-semibold hover:underline cursor-pointer">
+        <a href="https://www.google.com/maps/place/R-241,+Ground+Floor,+G.K-1,+Opp.+GK-1+Police+Station,+New+Delhi+-+110048" target="_blank" className="text-blue-400 font-semibold hover:underline cursor-pointer">
           View on Google Maps
         </a>
       </>
@@ -478,7 +478,7 @@ Reg no-3224/A
                   {["Experienced Dentists", "Advanced Technology", "Complete Dental Solutions", "Hygiene & Safety First", "Affordable & Transparent Pricing", "Patient-Friendly Environment"].map((text) => (
                     <div key={text} className="flex items-center gap-3 text-[#E8E8E8]">
                       <CircleCheckBig size={20} className="text-[#D4AF37] shrink-0" />
-                      <span className="text-sm">{text}</span>
+                      <span className="text-sm ">{text}</span>
                     </div>
                   ))}
                 </div>

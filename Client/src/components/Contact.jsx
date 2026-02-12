@@ -24,7 +24,7 @@ const Contact = () => {
     setIsSubmitting(true); // Button disable ho jayega aur loading dikhayega
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch('https://ddc-backend-ufaf.onrender.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -267,7 +267,7 @@ const NewContactCard = ({ icon, title, line1, line2, linkText, link, highlight }
     <div className="space-y-1 text-left">
       <h4 className="text-[#D4AF37] font-bold text-xs uppercase tracking-[0.2em] mb-2">{title}</h4>
       <p className="text-white font-bold text-base leading-tight">{line1}</p>
-      <p className="text-gray-400 text-sm">{line2}</p>
+      <p className="text-gray-100 text-sm">{line2}</p>
       {highlight && <p className="text-blue-400 text-xs font-bold italic mt-2">{highlight}</p>}
       {linkText && (
         <a href={link} target="_blank" rel="noopener noreferrer" className="inline-block text-[#D4AF37] text-xs font-bold underline underline-offset-4 mt-3 hover:text-white transition-colors">

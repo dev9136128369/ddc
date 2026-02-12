@@ -2,12 +2,21 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Trash2, Calendar, Phone, Mail, User, Clock, Loader2, AlertCircle } from 'lucide-react';
 
-const API_BASE_URL = 'http://localhost:5000/api/contact';
+// const API_BASE_URL = 'http://localhost:5000/api/contact';
+const API_BASE_URL = 'https://ddc-backend-ufaf.onrender.com/api/contact';
+
+
 
 const AppointmentList = () => {
   const [appointments, setAppointments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+const formatDate = (dateString) => {
+    if (!dateString) return 'TBD';
+    const [year, month, day] = dateString.split('-');
+    return `${day}-${month}-${year}`;
+  };
 
   const fetchAppointments = async () => {
     try {
@@ -98,7 +107,8 @@ const AppointmentList = () => {
                   <td className="p-4">
                     <span className="block text-xs font-bold text-[#F68D22]">{app.service}</span>
                     <span className="text-[10px] text-slate-500 flex items-center gap-1">
-                      <Calendar size={10} /> {app.date || 'TBD'}
+                      {/* 2. UPDATED DATE RENDERING */}
+                      <Calendar size={10} /> {formatDate(app.date)}
                     </span>
                   </td>
                   <td className="p-4">

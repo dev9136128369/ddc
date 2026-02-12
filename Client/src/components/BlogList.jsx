@@ -8,7 +8,9 @@ import {
 } from 'react-share';
 import { Share2, Calendar, ArrowRight, Loader2 } from 'lucide-react';
 
-const API_BASE_URL = import.meta.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+// const API_BASE_URL = import.meta.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.REACT_APP_API_URL || 'https://ddc-backend-ufaf.onrender.com/api';
+
 
 const BlogList = ({ category, pageTitle }) => {
   const [blogs, setBlogs] = useState([]);
