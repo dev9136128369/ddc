@@ -34,7 +34,9 @@ export const UserProvider = ({ children }) => {
 
   // Create axios instance with base URL
   const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || 'https://ciphershieldwebserver.onrender.com',
+    baseURL: import.meta.env.VITE_API_URL || 'https://ddc-backend-ufaf.onrender.com',
+
+    // baseURL: import.meta.env.VITE_API_URL || 'https://ciphershieldwebserver.onrender.com',
     timeout: 10000
   });
 

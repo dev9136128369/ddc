@@ -18,11 +18,11 @@ const userSchema = new mongoose.Schema({
 });
 
 // Update lastLogin timestamp before saving
-userSchema.pre('save', function(next) {
+userSchema.pre('save', function() {
   if (this.isModified('email')) {
     this.lastLogin = Date.now();
   }
-  next();
+  
 });
 
 module.exports = mongoose.model('User', userSchema);

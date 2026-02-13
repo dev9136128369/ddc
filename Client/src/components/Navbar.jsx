@@ -93,12 +93,14 @@ const { user, logout } = useUser();
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
-                key={link.name}
-                to={link.href} // 3. href ko 'to' mein badla
-                className="text-white hover:text-[#d4af37] text-[18px] transition-all duration-300"
-              >
-                {link.name}
-              </Link>
+  key={link.name}
+  to={link.href}
+  className={`text-white hover:text-[#d4af37] transition-all duration-300 ${
+    user?.email === "delhidentalclinicindia@gmail.com" ? 'text-[15px]' : 'text-[18px]'
+  }`}
+>
+  {link.name}
+</Link>
             ))}
           </div>
 

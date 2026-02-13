@@ -7,4 +7,5 @@ Server/node_modules/
 Client/dist/
 
 # environment variables
-.env
+**/.env
+

@@ -12,7 +12,8 @@ const Contact = () => {
     name: '', 
     email: '', 
     phone: '', 
-    service: '', 
+    service: '',
+    date: '', 
     message: '' 
   });
 
@@ -25,6 +26,8 @@ const Contact = () => {
 
     try {
       const response = await fetch('https://ddc-backend-ufaf.onrender.com/api/contact', {
+      // const response = await fetch('http://localhost:5000/api/contact', {
+
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -38,6 +41,7 @@ const Contact = () => {
           email: '',
           phone: '',
           service: 'General Checkup',
+          date: '',
           message: ''
         });
       } else {
@@ -163,58 +167,109 @@ const Contact = () => {
                 </h3>
 
                 <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10 text-left">
-                  <div className="space-y-2">
-                    <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Full Name *</label>
-                    <input type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} placeholder="John Doe" className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-black outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required />
-                  </div>
+  
+  {/* Full Name - Full Width (md:col-span-2) */}
+  <div className="md:col-span-2 space-y-2">
+    <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Full Name *</label>
+    <input 
+      type="text" 
+      value={formData.name} 
+      onChange={(e) => setFormData({...formData, name: e.target.value})} 
+      placeholder="John Doe" 
+      className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-black outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" 
+      required 
+    />
+  </div>
 
-                  <div className="space-y-2">
-                    <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Email Address *</label>
-                    <input type="email" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} placeholder="john@example.com" className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-black outline-none focus:border-[#D4AF37] transition-all" required />
-                  </div>
+  {/* Email Address */}
+  <div className="space-y-2">
+    <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Email Address *</label>
+    <input 
+      type="email" 
+      value={formData.email} 
+      onChange={(e) => setFormData({...formData, email: e.target.value})} 
+      placeholder="john@example.com" 
+      className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-black outline-none focus:border-[#D4AF37] transition-all" 
+      required 
+    />
+  </div>
 
-                  <div className="space-y-2">
-                    <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Phone Number *</label>
-                    <input type="tel" value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} placeholder="+91 XXXXX XXXXX" className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-black outline-none focus:border-[#D4AF37] transition-all" required />
-                  </div>
+  {/* Phone Number */}
+  <div className="space-y-2">
+    <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Phone Number *</label>
+    <input 
+      type="tel" 
+      value={formData.phone} 
+      onChange={(e) => setFormData({...formData, phone: e.target.value})} 
+      placeholder="+91 XXXXX XXXXX" 
+      className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-black outline-none focus:border-[#D4AF37] transition-all" 
+      required 
+    />
+  </div>
 
-                  <div className="space-y-2">
-                    <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Preferred Service *</label>
-                    <select value={formData.service} onChange={(e) => setFormData({...formData, service: e.target.value})}  className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-[#0A1628] outline-none focus:border-[#D4AF37] transition-all appearance-none cursor-pointer" required>
-                      <option value="" disabled>Select a service</option>
-                      <option value="General Checkup">General Checkup</option>
-                      <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
-                      <option value="Orthodontics">Orthodontics</option>
-                      <option value="Dental Implants">Dental Implants</option>
-                      <option value="Root Canal Treatment">Root Canal Treatment</option>
-                    </select>
-                  </div>
+  {/* Preferred Service */}
+  <div className="space-y-2">
+    <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Preferred Service *</label>
+    <select 
+      value={formData.service} 
+      onChange={(e) => setFormData({...formData, service: e.target.value})}  
+      className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-[#0A1628] outline-none focus:border-[#D4AF37] transition-all appearance-none cursor-pointer" 
+      required
+    >
+      <option value="" disabled>Select a service</option>
+      <option value="General Checkup">General Checkup</option>
+      <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+      <option value="Orthodontics">Orthodontics</option>
+      <option value="Dental Implants">Dental Implants</option>
+      <option value="Root Canal Treatment">Root Canal Treatment</option>
+    </select>
+  </div>
 
-                  <div className="md:col-span-2 space-y-2">
-                    <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Your Message</label>
-                    <textarea rows="4" value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} placeholder="How can we help you?" className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-black outline-none focus:border-[#D4AF37] transition-all resize-none"></textarea>
-                  </div>
+  {/* Preferred Date */}
+  <div className="space-y-2">
+    <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Preferred Date *</label>
+    <input 
+      type="date" 
+      value={formData.date}
+      min={new Date().toISOString().split("T")[0]} 
+      onChange={(e) => setFormData({...formData, date: e.target.value})} 
+      className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-black outline-none focus:border-[#D4AF37] transition-all cursor-pointer" 
+      required 
+    />
+  </div>
 
-                  <div className="md:col-span-2 mt-4">
-                    {/* <button type="submit" className="w-full bg-gradient-to-r from-[#D4AF37] to-[#B8941F] text-[#0A1628] py-5 rounded-2xl font-extrabold text-lg shadow-xl hover:shadow-[#D4AF37]/20 transition-all transform hover:scale-[1.01] flex items-center justify-center gap-3 group">
-                      Confirm & Send Request <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </button> */}
-                    <button 
-            type="submit" 
-            disabled={isSubmitting} 
-            className={`w-full py-5 rounded-2xl font-extrabold text-lg flex items-center justify-center gap-3 transition-all ${isSubmitting ? 'bg-gray-500 cursor-not-allowed' : 'bg-gradient-to-r from-[#D4AF37] to-[#B8941F] text-[#0A1628] hover:scale-[1.01]'}`}
-          >
-            {isSubmitting ? (
-              <>Processing... <Clock className="animate-spin" size={20} /></>
-            ) : (
-              <>Confirm & Send Request <Send size={20} /></>
-            )}
-          </button>
-                    <p className="text-center text-gray-500 text-xs mt-6 font-medium italic">
-                       * We typically respond within 2 business hours.
-                    </p>
-                  </div>
-                </form>
+  {/* Your Message - Full Width */}
+  <div className="md:col-span-2 space-y-2">
+    <label className="text-gray-400 text-xs uppercase font-bold tracking-widest ml-2">Your Message</label>
+    <textarea 
+      rows="4" 
+      value={formData.message} 
+      onChange={(e) => setFormData({...formData, message: e.target.value})} 
+      placeholder="How can we help you?" 
+      className="w-full p-4 bg-[#e7f0f8] border border-gray-800 rounded-2xl text-black outline-none focus:border-[#D4AF37] transition-all resize-none"
+    ></textarea>
+  </div>
+
+  {/* Submit Button Section - Full Width */}
+  <div className="md:col-span-2 mt-4">
+    <button 
+      type="submit" 
+      disabled={isSubmitting} 
+      className={`w-full py-5 rounded-2xl font-extrabold text-lg flex items-center justify-center gap-3 transition-all ${
+        isSubmitting ? 'bg-gray-500 cursor-not-allowed' : 'bg-gradient-to-r from-[#D4AF37] to-[#B8941F] text-[#0A1628] hover:scale-[1.01]'
+      }`}
+    >
+      {isSubmitting ? (
+        <>Processing... <Clock className="animate-spin" size={20} /></>
+      ) : (
+        <>Confirm & Send Request <Send size={20} /></>
+      )}
+    </button>
+    <p className="text-center text-gray-500 text-xs mt-6 font-medium italic">
+      * We typically respond within 2 business hours.
+    </p>
+  </div>
+</form>
               </div>
             </div>
           </div>

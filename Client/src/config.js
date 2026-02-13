@@ -13,8 +13,8 @@
 
 
 export const API_CONFIG = {
-  // BASE_URL: "http://localhost:5000", // Your backend URL
-  BASE_URL: "https://ddc-backend-ufaf.onrender.com", // Your backend URL
+  // BASE_URL: "http://localhost:5000", 
+  BASE_URL: "https://ddc-backend-ufaf.onrender.com", 
   
   ENDPOINTS: {
     LOGIN: "/auth/login",
