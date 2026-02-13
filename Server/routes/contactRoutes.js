@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
                 // ADMIN NOTIFICATION (Aapke liye)
                 to: process.env.RECEIVER_EMAIL,
                 from: process.env.EMAIL_USER, // Yeh SendGrid par verified hona chahiye
-                subject: `Urgent: New Appointment Lead - ${name}`,
+                subject: `New Consultation Request: ${name} - DDC`,
                 html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden;">
                     <div style="background-color: #0A1628; padding: 20px; text-align: center;">

@@ -13,28 +13,38 @@ const LoginPage = () => {
   const { login } = useUser();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError('');
+  e.preventDefault();
+  setLoading(true);
+  setError('');
 
-    try {
-      // Logic same rakhi hai as per your requirement
-      const success = await login(email, password);
+  try {
+    const success = await login(email, password);
 
-      if (success) {
-        // Admin email check (aap ise apne dental admin email se replace kar sakte hain)
-        navigate(email === 'delhidentalclinicindia@gmail.com'
-          ? '/ManagementDashboard'
-          : '/');
+    if (success) {
+      // Agar login success hai aur email admin ki hai
+      if (email === 'delhidentalclinicindia@gmail.com') {
+        navigate('/ManagementDashboard');
       } else {
-        setError('Invalid credentials. Please try again.');
+        // Agar login success hai par email admin ki nahi hai
+        navigate('/');
       }
-    } catch (err) {
-      setError(err.response?.data?.message || err.message || 'Login failed. Connection error.');
-    } finally {
-      setLoading(false);
     }
-  };
+  } catch (err) {
+    // AGAR LOGIN FAIL HOTA HAI (401 Error)
+    if (err.response && err.response.status === 401) {
+      setError('Invalid Admin Credentials. Redirecting to home...');
+      
+      // 2 second baad home page par redirect kar dega
+      setTimeout(() => {
+        navigate('/');
+      }, 2000);
+    } else {
+      setError('Login failed. Please check your connection.');
+    }
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <>

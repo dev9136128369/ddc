@@ -5,27 +5,32 @@ const User = require('../models/User');
 const { sendLoginEmail } = require('../utils/email');
 
 // Login endpoint
+// auth.js
+// auth.js (Modified Login Logic)
 router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // Basic validation
-    if (!email || !password) {
-      return res.status(400).json({ success: false, message: 'Email and password are required' });
+    // Check environment variable loading
+    if (!process.env.ADMIN_PASSWORD) {
+       console.error("CRITICAL: ADMIN_PASSWORD is not set in environment variables");
     }
 
-    // Check if user exists or create new one
+    // 1. Check Master Admin Credentials
+    const isMasterAdmin = email === 'delhidentalclinicindia@gmail.com' && password === process.env.ADMIN_PASSWORD;
+
+    if (!isMasterAdmin) {
+      return res.status(401).json({ success: false, message: 'Invalid Admin Credentials' });
+    }
+
+    // 2. Find or Create User (Taaki empty DB par bhi chale)
     let user = await User.findOne({ email });
     if (!user) {
       user = new User({ email });
       await user.save();
     }
 
-    // Send login notification email
-    // await sendLoginEmail(email);
-    sendLoginEmail(email);
-    
-    // Create JWT token
+    // 3. Create JWT Token
     const token = jwt.sign(
       { userId: user._id, email: user.email },
       process.env.JWT_SECRET,
